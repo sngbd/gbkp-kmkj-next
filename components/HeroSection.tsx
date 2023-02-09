@@ -13,7 +13,7 @@ const HeroSection = (arg: any) => {
   }  
   
   return (
-    <div className={styles[cName]}>
+    <div className={cName.split(" ").map((c: any) => styles[c]).join(" ")}>
       <Image
         src={image}
         alt={alt} 

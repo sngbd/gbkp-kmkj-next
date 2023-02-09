@@ -6,4 +6,8 @@
   * {
     @apply box-border m-0 p-0
   }
+  
+  a {
+    @apply text-black
+  }
 }

@@ -13,6 +13,11 @@ const nextConfig = {
         hostname: 'prismic-io.s3.amazonaws.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.pixabay.com',
+        pathname: '/**',
+      },
     ]
   }
 };
