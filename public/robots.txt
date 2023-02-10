@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
+Allow: /*
 
 Sitemap: https://gbkp-kmkj.vercel.app/sitemap.xml
