@@ -147,6 +147,6 @@
 
 @media (max-width: 540px) {
   .cards__item__text {
-    font-size: 3vw;
+    font-size: 15px;
   }
 }

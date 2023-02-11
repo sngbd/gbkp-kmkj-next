@@ -58,14 +58,27 @@ function NavItem({ item, path, menuItem, closeMobileMenu }: any) {
         })
       }
     </>    
-  )
-}
+  ) }
 
 function Navbar() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const [desktop, setDesktop] = useState(true);
+  
+  const showMobile = () => {
+    if (window.innerWidth <= 960) {
+      setDesktop(false);
+    } else {
+      setDesktop(true);
+    }
+  };
+
+  useEffect(() => {
+    showMobile();
+  });
 
   return (
     <>
@@ -90,6 +103,12 @@ function Navbar() {
               </Link>
             </li>
           </ul>
+          {
+            desktop && 
+            <Button buttonStyle='btn--outline' linkTo='#hubungi'>
+              Hubungi Kami
+            </Button>
+          }
         </div>
       </nav>
     </>
