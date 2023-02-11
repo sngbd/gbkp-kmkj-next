@@ -11,43 +11,58 @@ import {
   faCaretDown,
 } from '@fortawesome/free-solid-svg-icons'
 
-function NavItem({ item, path, menuItem }: any) {
-  const [hover, setHover] = useState(false);
+function NavItem({ item, path, menuItem, closeMobileMenu }: any) {
+  const [mobile, setMobile] = useState(true);
+  const [dropDown, setDropDown] = useState(false);
+  
+  const toggleDropDown = () => setDropDown(!dropDown);
+
+  const showMobile = () => {
+    if (window.innerWidth <= 960) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    showMobile();
+  });
 
   return (
     <>
       <li 
         className={styles['nav-item']}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
+        onClick={toggleDropDown}
       >
-        <Link href={path} className={styles['nav-links']}>
+        <Link href={path} className={styles['nav-links']} onClick={!menuItem && closeMobileMenu}>
           {item} {menuItem && <FontAwesomeIcon icon={faCaretDown} />}
         </Link>
-        {hover && menuItem && <Dropdown MenuItems={menuItem} />}
+        {!mobile && menuItem && <Dropdown MenuItems={menuItem} />}
       </li>
+      {
+        mobile && dropDown &&
+        menuItem && menuItem.map((item: any, index: any) => {
+          return (
+            <li 
+              key={index}
+              className={styles['nav-dropdown']}>
+              <Link className={styles['nav-links']} href={item.path} onClick={closeMobileMenu}>
+                {item.title}
+              </Link>
+            </li>
+          );
+        })
+      }
     </>    
   )
 }
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
 
   return (
     <>
@@ -60,24 +75,18 @@ function Navbar() {
             <FontAwesomeIcon icon={click ? faTimes : faBars} />
           </div>
           <ul className={click ? `${styles['nav-menu']} ${styles['active']}` : styles['nav-menu']}>
-            <NavItem item="Profil" path="#" menuItem={profile} />
-            <NavItem item="Berita" path="/berita" />
-            <NavItem item="Kategorial" path="#" menuItem={kategorial} />
-            <NavItem item="Bahan Renungan" path="#" menuItem={renungan} />
-            <NavItem item="Runggun" path="/runggun" />
-            <NavItem item="Dokumen" path="#" menuItem={dokumen} />
+            <NavItem item="Profil" path="#" menuItem={profile} closeMobileMenu={closeMobileMenu} />
+            <NavItem item="Berita" path="/berita" closeMobileMenu={closeMobileMenu} />
+            <NavItem item="Kategorial" path="#" menuItem={kategorial} closeMobileMenu={closeMobileMenu} />
+            <NavItem item="Bahan Renungan" path="#" menuItem={renungan} closeMobileMenu={closeMobileMenu} />
+            <NavItem item="Runggun" path="/runggun" closeMobileMenu={closeMobileMenu} />
+            <NavItem item="Dokumen" path="#" menuItem={dokumen} closeMobileMenu={closeMobileMenu} />
             <li>
               <Link href='#hubungi' className={styles['nav-links-mobile']} onClick={closeMobileMenu}>
                 Hubungi Kami
               </Link>
             </li>
           </ul>
-          {
-            button && 
-            <Button buttonStyle='btn--outline' linkTo='#hubungi'>
-              Hubungi Kami
-            </Button>
-          }
         </div>
       </nav>
     </>
