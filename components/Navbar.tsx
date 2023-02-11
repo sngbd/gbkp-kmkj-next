@@ -38,7 +38,7 @@ function NavItem({ item, path, menuItem, closeMobileMenu }: any) {
         onMouseLeave={() => setHover(false)}
         onClick={toggleDropDown}
       >
-        <Link href={path} className={styles['nav-links']} onClick={!menuItem && closeMobileMenu}>
+        <Link href={path} className={(mobile && dropDown && menuItem) ? styles['nav-links-bgwhite'] : styles['nav-links']} onClick={!menuItem && closeMobileMenu}>
           {item} {menuItem && <FontAwesomeIcon icon={faCaretDown} />}
         </Link>
         {!mobile && hover && menuItem && <Dropdown MenuItems={menuItem} />}
