@@ -144,3 +144,9 @@
     height: 100vw;
   }
 }
+
+@media (max-width: 540px) {
+  .cards__item__text {
+    font-size: 3vw;
+  }
+}

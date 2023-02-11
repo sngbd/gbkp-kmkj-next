@@ -6,11 +6,16 @@ import { ReactElement, ReactNode } from 'react'
 import { NextPage } from 'next'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Head from 'next/head'
 config.autoAddCss = false
 
 function Layout({ children }: { children: ReactElement }) {
   return (
     <>
+
+      <Head>
+        <title>GBKP KMKJ</title>
+      </Head>
       <Navbar />
       <main>{children}</main>
       <Footer />

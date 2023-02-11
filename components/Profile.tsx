@@ -12,13 +12,12 @@ const Profile = ({ profile }: any) => {
   return (
     <>
       <div className={styles["profile-card-container"]}>
-        <div className={styles["circle"]}></div>
         <Image className={styles["profile-img"]} src={foto.url} alt="pic" width={100} height={100} />
         <div className={styles["text-container"]}>
-          <p className={styles["title-text"]}>{nama}</p>
+          <h2 className={styles["title-text"]}>{nama}</h2>
           {
             jabatan && (
-              <p className={styles["info-text"]}>{jabatan}</p>
+              <p className={styles["title"]}>{jabatan}</p>
             )
           }
           <p className={styles["desc-text"]}>
