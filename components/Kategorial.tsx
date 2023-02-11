@@ -31,7 +31,6 @@ const Kategorial = ({ title, linkTo }: any) => {
         image='/images/gbkp-kmk.jpeg'
         alt={title}
         title={title}
-        desc='Lorem ipsum dolor sit amet' 
         button={button}
       />
       <Page title='Kegiatan' content={

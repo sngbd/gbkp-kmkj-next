@@ -1,5 +1,6 @@
 .btn {
   padding: 8px 20px;
+  margin-right: 10px;
   border-radius: 2px;
   outline: none;
   border: none;
@@ -37,10 +38,4 @@
   background: #fff;
   color: #242424;
   transition: 250ms;
-}
-
-@media screen and (max-width: 960px) {
-  .btn--outline {
-    display: none;
-  }
 }

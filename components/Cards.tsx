@@ -15,7 +15,7 @@ function Cards({ content }: any) {
                   src={b.data.berita.filter((el: any) => el.type === 'image')[0].url}
                   text={b.data.judul}
                   label='Berita'
-                  path={`/berita/${b.slugs[0]}`}
+                  path={`/berita/${b.uid}`}
                   key={b.data.judul}
                 />
               })
