@@ -12,8 +12,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 function NavItem({ item, path, menuItem, closeMobileMenu }: any) {
-  const [mobile, setMobile] = useState(true);
+  const [hover, setHover] = useState(false);
   const [dropDown, setDropDown] = useState(false);
+  const [mobile, setMobile] = useState(true);
   
   const toggleDropDown = () => setDropDown(!dropDown);
 
@@ -33,12 +34,14 @@ function NavItem({ item, path, menuItem, closeMobileMenu }: any) {
     <>
       <li 
         className={styles['nav-item']}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
         onClick={toggleDropDown}
       >
         <Link href={path} className={styles['nav-links']} onClick={!menuItem && closeMobileMenu}>
           {item} {menuItem && <FontAwesomeIcon icon={faCaretDown} />}
         </Link>
-        {!mobile && menuItem && <Dropdown MenuItems={menuItem} />}
+        {!mobile && hover && menuItem && <Dropdown MenuItems={menuItem} />}
       </li>
       {
         mobile && dropDown &&
