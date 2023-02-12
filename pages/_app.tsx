@@ -15,6 +15,7 @@ function Layout({ children }: { children: ReactElement }) {
 
       <Head>
         <title>GBKP KMKJ</title>
+        <link rel="icon" href="/gbkp-logo.png" />
       </Head>
       <Navbar />
       <main>{children}</main>

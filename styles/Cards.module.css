@@ -1,5 +1,5 @@
 .cards {
-  padding: 4rem;
+  padding: 4rem 2rem;
   background: #fff;
   font-family: 'Open Sans', Arial;
 }
@@ -142,6 +142,10 @@
   .article iframe {
     width: 100vw;
     height: 100vw;
+  }
+  
+  .article img {
+    width: 100%;
   }
 }
 

@@ -67,6 +67,11 @@
     font-size: 70px;
     margin-top: -150px;
   }
+
+  .hero-container > p {
+    font-size: 25px;
+    margin: 30px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -76,7 +81,8 @@
   }
 
   .hero-container > p {
-    font-size: 30px;
+    font-size: 25px;
+    margin: 30px;
   }
 
   .btn-mobile {
