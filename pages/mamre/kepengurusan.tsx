@@ -9,7 +9,7 @@ function Mamre({ results }: any) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const client = createClient();
   
   const { results } = await client.getByType('kepengurusan-mamre');

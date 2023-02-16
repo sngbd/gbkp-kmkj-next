@@ -1,7 +1,7 @@
 import Article from "@/components/Article";
 import { createClient } from "@/prismicio";
 import { PrismicRichText } from "@prismicio/react";
-import { GetStaticPropsContext } from "next";
+import { GetServerSidePropsContext } from "next";
 
 function Pekan({ data }: any) {
   return (
@@ -11,7 +11,7 @@ function Pekan({ data }: any) {
   )
 }
 
-export async function getStaticProps(context: GetStaticPropsContext) {
+export async function getServerSideProps(context: GetServerSidePropsContext) {
   const uid: any = context.params!.uid;
 
   const client = createClient()

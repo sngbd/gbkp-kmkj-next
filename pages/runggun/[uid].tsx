@@ -1,5 +1,5 @@
 import { createClient } from "@/prismicio";
-import { GetStaticPropsContext } from "next";
+import { GetServerSidePropsContext } from "next";
 import styles from '@/styles/Cards.module.css'
 import Page from "@/components/Page";
 import Profile from "@/components/Profile";
@@ -15,7 +15,7 @@ function Runggun({ data }: any) {
   )
 }
 
-export async function getStaticProps(context: GetStaticPropsContext) {
+export async function getServerSideProps(context: GetServerSidePropsContext) {
   const uid: any = context.params!.uid;
 
   const client = createClient()
