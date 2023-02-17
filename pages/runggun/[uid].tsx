@@ -27,7 +27,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   }
 }
 
-export async function getStaticPaths() {
+export async function getServerSidePaths() {
   const client = createClient()
 
   const { results } = await client.getByType('runggun')
