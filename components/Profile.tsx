@@ -35,7 +35,6 @@ const Profile = ({ profile }: any) => {
                 </>
               )
             }
-            <br />
             {
               email && (
                 <>

@@ -4,6 +4,14 @@
   font-family: 'Open Sans', Arial;
 }
 
+.cards-top {
+  padding-bottom: 1rem;
+}
+
+.cards-bottom {
+  padding-top: 1rem;
+}
+
 .article p {
   display: block;
   margin-block-start: 1em;

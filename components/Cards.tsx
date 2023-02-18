@@ -1,21 +1,21 @@
-import React from 'react';
 import styles from '@/styles/Cards.module.css';
+import Link from 'next/link';
 import CardItem from './CardItem';
 
-function Cards({ content }: any) {
+function Cards({ content, type = 'berita', title = 'Berita', cardClass, path = '/berita' }: any) {
   return (
-    <div className={styles.cards}>
-      <h1>Berita</h1>
+    <div className={`${styles.cards} ${styles[cardClass]}`}>
+      <h1><Link href={path}>{title}</Link></h1>
       <div className={styles.cards__container}>
         <div className={styles.cards__wrapper}>
           <ul className={styles.cards__items}>
             {
               content.slice(0, 3).map((b: any) => {
                 return <CardItem
-                  src={b.data.berita.filter((el: any) => el.type === 'image')[0].url}
+                  src={b.data[type].filter((el: any) => el.type === 'image')[0]?.url || '/blank.jpg'}
                   text={b.data.judul}
-                  label='Berita'
-                  path={`/berita/${b.uid}`}
+                  label={title}
+                  path={`${path}/${b.uid}`}
                   key={b.data.judul}
                 />
               })

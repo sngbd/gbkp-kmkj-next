@@ -2,8 +2,10 @@ import { Button } from "./Button";
 import HeroSection from "./HeroSection";
 import Page from "./Page";
 import styles from '@/styles/HeroSection.module.css';
+import CardStyles from '@/styles/Cards.module.css';
+import Cards from "./Cards";
 
-const Kategorial = ({ title, linkTo }: any) => {
+const Kategorial = ({ title, linkTo, kegiatan, path }: any) => {
   const button = (
     <div className='hero-btns'>
       <Button
@@ -33,22 +35,8 @@ const Kategorial = ({ title, linkTo }: any) => {
         title={title}
         button={button}
       />
-      <Page title='Kegiatan' content={
-          `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
-      }
-      />
-      <Page title='Info' content={
-          `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
-      }
-      />
+      <Cards content={kegiatan} type='kegiatan' title='Kegiatan' cardClass='cards-top' path={path} />
+      <Cards content={kegiatan} type='kegiatan' title='Info' cardClass='cards-bottom' path={path} />
     </>
   );
 }
