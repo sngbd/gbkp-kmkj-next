@@ -7,7 +7,7 @@ function BPMK ({ results }: any) {
   return (
     <>
       <div className={styles['article']}>
-        <Page title="BPMK" content="" />
+        <Page title="BPMK (Badan Pekerja Majelis Klasis)" content="" />
       </div>
       {results[0].data.bpmk.map((item: any) => <Profile key={item.nama} profile={item} />)}
     </>
