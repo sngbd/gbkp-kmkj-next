@@ -11,7 +11,43 @@ const Profile = ({ profile }: any) => {
 
   return (
     <>
-      <div className={styles["profile-card-container"]}>
+      <div className={styles["profile-card"]}>
+        <div className={styles["profile-picture"]}>
+          <Image src={foto.url} alt="Profile picture" width={150} height={150} />
+        </div>
+        <div className={styles["profile-info"]}>
+              <h2>{nama}</h2>
+              {
+                jabatan && (
+                  <p>{jabatan}</p>
+                )
+              }
+              <p>
+                {
+                  tempat_pelayanan && (
+                    <>
+                      <FontAwesomeIcon icon={faChurch} /> {tempat_pelayanan} <br />
+                    </>
+                  )
+                }
+                {
+                  whatsapp && (
+                    <>
+                      <FontAwesomeIcon icon={faWhatsapp} /> {whatsapp} <br />
+                    </>
+                  )
+                }
+                {
+                  email && (
+                    <>
+                      <FontAwesomeIcon icon={faEnvelope} /> {email} <br />
+                    </>
+                  )
+                }
+              </p>
+        </div>
+      </div>
+      {/* <div className={styles["profile-card-container"]}>
         <Image className={styles["profile-img"]} src={foto.url} alt="pic" width={100} height={100} />
         <div className={styles["text-container"]}>
           <h2 className={styles["title-text"]}>{nama}</h2>
@@ -43,8 +79,8 @@ const Profile = ({ profile }: any) => {
               )
             }
           </p>
-        </div>
-      </div>
+        </div> */
+      /* </div> */}
     </>
   );
 }

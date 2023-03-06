@@ -3,14 +3,18 @@ import { GetServerSidePropsContext } from "next";
 import styles from '@/styles/Cards.module.css'
 import Page from "@/components/Page";
 import Profile from "@/components/Profile";
+import profileStyles from '@/styles/ProfileCard.module.css';
 
 function Runggun({ data }: any) {
   return (
     <>
       <div className={styles['article']}>
-        <Page title={`BPMR ${data.nama_runggun}`} content="" />
+        <Page title={`BPMR ${data.nama_runggun}`} cardStyle='cards__profile' content={
+          <div className={profileStyles['profiles-container']}>
+            {data.bpmr.map((item: any) => <Profile key={item.nama} profile={item} />)}
+          </div>
+        } />
       </div>
-      {data.bpmr.map((item: any) => <Profile key={item.nama} profile={item} />)}
     </>
   )
 }

@@ -45,6 +45,15 @@
   margin: 0 auto;
 }
 
+.cards__profile {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: 80vw;
+  width: 100%;
+  margin: 30px 10vw;
+}
+
 .cards__wrapper {
   position: relative;
   margin: 50px 0 45px;
