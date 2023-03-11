@@ -5,6 +5,7 @@ function Dropdown({MenuItems}: any) {
   return (
     <>
       <ul className={styles['dropdown-menu']}>
+        <div className={styles["items"]}>
         {MenuItems.map((item: any, index: any) => {
           return (
             <li key={index}>
@@ -14,6 +15,7 @@ function Dropdown({MenuItems}: any) {
             </li>
           );
         })}
+        </div>
       </ul>
     </>
   );

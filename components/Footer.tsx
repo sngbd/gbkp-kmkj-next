@@ -1,96 +1,45 @@
 import styles from '@/styles/Footer.module.css';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-  faHouse,
-  faPhone,
-  faEnvelope,
-} from '@fortawesome/free-solid-svg-icons'
-import { 
-  faFacebook,
-  faInstagram,
-  faYoutube,
-  faTwitter,
-  faLinkedin,
-} from '@fortawesome/free-brands-svg-icons'
 
 function Footer() {
   return (
-    <div className={styles['footer-container']} id="hubungi">
-      <div className={styles['footer-links']}>
-        <div className={styles['footer-link-wrapper']}>
-          <div className={styles['footer-link-items']}>
-            <h2><FontAwesomeIcon icon={faHouse} /></h2>
-            <h2>Alamat </h2>
-            <p>Jalan Jamin Ginting</p>
-          </div>
-          <div className={styles['footer-link-items']}>
-            <h2><FontAwesomeIcon icon={faPhone} /></h2>
-            <h2>Hubungi Kami</h2>
+    <>
+    <div className={styles["container"]}>
+      <div className={styles["inner_container"]}>
+        <div className={styles["address"]}>
+          <p className={styles["header"]}>Alamat</p>
+          <p>Jalan Jamin Ginting</p>
+        </div> 
+        <div className={styles["contact"]}>
+          <div className={styles["hubungi"]}>
+            <p className={styles["header"]}>Hubungi Kami</p>
             <p>(061) 88369578</p>
+            <p>info@dbkpkm8.or.id</p>
           </div>
-        </div>
-        <div className={styles['footer-link-wrapper']}>
-          <div className={styles['footer-link-items']}>
-            <h2><FontAwesomeIcon icon={faEnvelope} /></h2>
-            <h2>Email</h2>
-            <p>info@gbkpkm8.or.id</p>
+          <div className={styles["social"]}>
+            <p className={styles["header"]}>Social</p>
+            <div className={styles["logos"]}>
+              <Link href="/">
+                <svg width="18" height="33" viewBox="0 0 18 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.3685 18.0086H16.5699L17.3865 12.6925H11.3674V9.78703C11.3674 7.57865 12.0846 5.62036 14.1379 5.62036H17.4373V0.981151C16.8576 0.902394 15.6316 0.72998 13.3149 0.72998C8.47742 0.72998 5.64135 3.30023 5.64135 9.15591V12.6925H0.668457V18.0086H5.64135V32.6202C6.6262 32.7692 7.62374 32.8703 8.64773 32.8703C9.57334 32.8703 10.4767 32.7851 11.3685 32.6638V18.0086Z" fill="#3A4F39"/>
+                </svg>
+              </Link>
+              <Link href="/">
+                <svg width="29" height="23" viewBox="0 0 29 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M28.1201 3.37186C27.1419 3.79108 26.024 4.07057 24.9061 4.21031C26.024 3.51161 27.0021 2.39369 27.4214 1.13602C26.3034 1.83472 25.1855 2.25395 23.7881 2.53343C22.8099 1.4155 21.2728 0.716797 19.7356 0.716797C16.6614 0.716797 14.146 3.23212 14.146 6.30641C14.146 6.72563 14.146 7.14485 14.2858 7.56407C9.67434 7.28459 5.48212 5.04875 2.68731 1.69498C2.26809 2.53342 1.98861 3.5116 1.98861 4.48978C1.98861 6.44615 2.9668 8.12304 4.50394 9.10122C3.52576 9.10122 2.68731 8.82174 1.98861 8.40252C1.98861 11.0576 3.94497 13.4332 6.4603 13.8524C6.04108 13.9921 5.48213 13.9921 4.92317 13.9921C4.50395 13.9921 4.22446 13.9921 3.80524 13.8524C4.50394 16.0882 6.60005 17.7651 9.11538 17.7651C7.15902 19.3023 4.78343 20.1407 2.12836 20.1407C1.70914 20.1407 1.28992 20.1407 0.730957 20.001C3.24628 21.5381 6.18083 22.5163 9.39486 22.5163C19.7356 22.5163 25.3253 13.9921 25.3253 6.58589V5.88719C26.4432 5.46797 27.4214 4.48978 28.1201 3.37186Z" fill="#3A4F39"/>
+                </svg>
+              </Link>
+              <Link href="/">
+                <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.7413 12.5393V20.2469H17.2295V13.0093C17.2295 11.2233 16.5716 10.0014 14.9736 10.0014C13.7517 10.0014 12.9997 10.8474 12.7177 11.5993C12.6237 11.8813 12.5297 12.2573 12.5297 12.7273V20.2469H8.01795C8.01795 20.2469 8.11194 8.02748 8.01795 6.80554H12.5297V8.68545C13.0937 7.74549 14.2217 6.42955 16.5716 6.42955C19.4854 6.42955 21.7413 8.40346 21.7413 12.5393ZM3.31816 0.319824C1.81422 0.319824 0.780273 1.35378 0.780273 2.66972C0.780273 3.98566 1.72023 5.01961 3.22416 5.01961C4.82209 5.01961 5.76205 3.98566 5.76205 2.66972C5.85605 1.25978 4.91609 0.319824 3.31816 0.319824ZM1.06226 20.2469H5.57406V6.80554H1.06226V20.2469Z" fill="#3A4F39"/>
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-      <section className={styles['social-media']}>
-        <div className={styles['social-media-wrap']}>
-          <div className={styles['footer-logo']}>
-            <Link href='/' className={styles['social-logo']}>
-              GBKP KMKJ
-            </Link>
-          </div>
-          <small className={styles['website-rights']}>GBKP KMKJ © 2022</small>
-          <div className={styles['social-icons']}>
-            <Link
-              className={styles['social-icon-link']}
-              href='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <FontAwesomeIcon icon={faFacebook} />
-            </Link>
-            <Link
-              className={styles['social-icon-link']}
-              href='/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <FontAwesomeIcon icon={faInstagram} />
-            </Link>
-            <Link
-              className={styles['social-icon-link']}
-              href='/'
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <FontAwesomeIcon icon={faYoutube} />
-            </Link>
-            <Link
-              className={styles['social-icon-link']}
-              href='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <FontAwesomeIcon icon={faTwitter} />
-            </Link>
-            <Link
-              className={styles['social-icon-link']}
-              href='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <FontAwesomeIcon icon={faLinkedin} />
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
+    </>
   );
 }
 

@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 .navbar {
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-  height: 80px;
+  background: white;
+  height: 103.81px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  position: sticky;
   top: 0;
   z-index: 999;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Inter';
+  font-size: 16px;
+  line-height: 19px;
+  color: #262626;
+  position: sticky;
 }
 
 .navbar-container {
@@ -19,8 +24,8 @@
   max-width: 1500px;
 }
 
-.navbar-logo {
-  color: #fff;
+.navbar-logo img {
+  color: black;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -28,6 +33,8 @@
   font-size: 1.3rem;
   display: flex;
   align-items: center;
+  width: 191px;
+  height: 47.93px;
 }
 
 .fa-typo3 {
@@ -36,13 +43,12 @@
 }
 
 .nav-menu {
-  display: grid;
-  grid-template-columns: repeat(6, auto);
+  display: flex;
   grid-gap: 5px;
   list-style: none;
   text-align: center;
   width: 60vw;
-  justify-content: end;
+  justify-content: space-around;
   margin-right: 2rem;
 }
 
@@ -51,7 +57,7 @@
 }
 
 .nav-links {
-  color: #fff;
+  color: black;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -65,7 +71,7 @@
 }
 
 .fa-bars {
-  color: #fff;
+  color: black;
 }
 
 .nav-links-mobile {

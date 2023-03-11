@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.container {
+  width: 100%;
+  height: 1246px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter';
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 20px;
+  height: 157px;
+  left: 439px;
+  top: 987px;
+  margin-bottom: 70px;
+}
+
+.title {
+  height: 85px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 85px;
+  color: #000000;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.desc {
+  width: 647px;
+  height: 52px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160.52%;
+  text-align: center;
+  color: #000000;
+}
+
+.image {
+  width: 271px;
+  height: 265px;
+  left: 0px;
+  top: 93.01px;
+}
+
+.profile img {
+  object-fit: cover;
+}
+
+.profiles {
+  width: 956.4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profiles2 {
+  width: 956.4px;
+  margin-top: 71px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profile {
+  width: 271.03px;
+  height: 340.09px;
+  left: 0px;
+  top: 93.01px;
+  filter: drop-shadow(0px 27.8911px 132.258px rgba(139, 139, 139, 0.07))
+          drop-shadow(0px 6.22985px 29.5415px rgba(139, 139, 139, 0.0417275))
+          drop-shadow(0px 1.85479px 8.79528px rgba(139, 139, 139, 0.0282725));
+}
+
+.info {
+  width: 270.81px;
+  height: 75.58px;
+  left: 0px;
+  top: 357.53px;
+  background: #FFFFFF;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text {
+  margin-left: 19px;
+  font-family: 'Inter';
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.text p {
+  margin-bottom: 4.5px;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10.7533px 32.26px;
+  gap: 10.75px;
+  width: 243.31px;
+  height: 55.78px;
+  left: 357px;
+  top: 1020px;
+  background: #69CDF9;
+  box-shadow: 0px 1.6475px 3.295px rgba(0, 0, 0, 0.25);
+  border-radius: 33.7737px;
+  margin-top: 70px;
+  text-decoration: none;
+}
+
+.button p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 27px;
+  text-align: center;
+  color: #FFFFFF;
+}

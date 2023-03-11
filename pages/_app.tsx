@@ -7,18 +7,19 @@ import { NextPage } from 'next'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Head from 'next/head'
+import NewNavbar from '@/components/NewNavbar'
+import styles from '@/styles/Global.module.css';
 config.autoAddCss = false
 
 function Layout({ children }: { children: ReactElement }) {
   return (
     <>
-
       <Head>
         <title>GBKP KMKJ</title>
         <link rel="icon" href="/gbkp-logo.png" />
       </Head>
-      <Navbar />
-      <main>{children}</main>
+      <NewNavbar />
+      <main className={styles.bg}>{children}</main>
       <Footer />
     </>
   )

@@ -4,7 +4,7 @@ import { createClient } from "@/prismicio";
 function Moria({ results, cover }: any) {
   return (
     <>
-      <Kategorial linkTo="/moria" title="Moria" kegiatan={results} cover={cover.results[0].data.moria.url} path='/moria/kegiatan-info' />
+      <Kategorial linkTo="/moria" title="Moria" kegiatan={results} path='/moria/kegiatan-info' />
     </>
   )
 }

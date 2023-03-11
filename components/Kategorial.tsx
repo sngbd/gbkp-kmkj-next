@@ -5,7 +5,7 @@ import styles from '@/styles/HeroSection.module.css';
 import CardStyles from '@/styles/Cards.module.css';
 import Cards from "./Cards";
 
-const Kategorial = ({ title, linkTo, kegiatan, path, cover }: any) => {
+const Kategorial = ({ title, linkTo, kegiatan, path }: any) => {
   const button = (
     <div className='hero-btns'>
       <Button
@@ -30,7 +30,7 @@ const Kategorial = ({ title, linkTo, kegiatan, path, cover }: any) => {
     <>
       <HeroSection 
         cName='hero-container kategorial'
-        image={cover}
+        image={""}
         alt={title}
         title={title}
         button={button}

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.container {
+  height: 791px;
+  left: -1px;
+  top: 2030px;
+  background: #F7FAFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter';
+}
+
+.title {
+  width: 491px;
+  height: 146px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60.1468px;
+  line-height: 73px;
+  margin-bottom: 25px;
+}
+
+.info {
+  width: 579px;
+  height: 132px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 44px;
+  color: #000000;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 46px;
+  background: #69CDF9;
+  box-shadow: 0px 1.38812px 2.77624px rgba(0, 0, 0, 0.25);
+  border-radius: 28.4565px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.left {
+  margin-top: 150px;
+}
+
+.verses {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 706.79px;
+  height: 613.19px;
+  left: 598px;
+  top: 40px;
+}
+
+.verse {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 518.79px;
+  height: 145.06px;
+  background: #FFFFFF;
+  box-shadow: 0px 16.4723px 109.815px rgba(0, 0, 0, 0.07), 0px 2.06258px 13.7506px rgba(0, 0, 0, 0.035);
+  border-radius: 13.9272px;
+}
+
+.verse2 {
+  margin-left: 188px;
+}
+
+.verse3 {
+  margin-left: 62px;
+}
+
+.bible_verse {
+  width: 116px;
+  height: 23px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 19.498px;
+  line-height: 23px;
+  text-align: right;
+  color: #1F2027;
+  margin-left: 28px;
+}
+
+.text {
+  width: 463.08px;
+  height: 58px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.5344px;
+  line-height: 19px;
+  text-align: right;
+  color: #1F2027;
+  margin-left: 27px;
+}

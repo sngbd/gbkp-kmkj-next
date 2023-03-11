@@ -10,6 +10,7 @@ import {
   faBars,
   faCaretDown,
 } from '@fortawesome/free-solid-svg-icons'
+import Image from 'next/image';
 
 function NavItem({ item, path, menuItem, closeMobileMenu }: any) {
   const [hover, setHover] = useState(false);
@@ -85,7 +86,7 @@ function Navbar() {
       <nav className={styles['navbar']}>
         <div className={styles['navbar-container']}>
           <Link href='/' className={styles['navbar-logo']} onClick={closeMobileMenu}>
-            GBKP Klasis Medan Kutajurung
+            <Image src="/logo.png" alt="logo" width={198} height={48.8} />
           </Link>
           <div className={styles['menu-icon']} onClick={handleClick}>
             <FontAwesomeIcon icon={click ? faTimes : faBars} />
@@ -97,18 +98,7 @@ function Navbar() {
             <NavItem item="Bahan Renungan" path="#" menuItem={renungan} closeMobileMenu={closeMobileMenu} />
             <NavItem item="Runggun" path="/runggun" closeMobileMenu={closeMobileMenu} />
             <NavItem item="Dokumen" path="#" menuItem={dokumen} closeMobileMenu={closeMobileMenu} />
-            <li>
-              <Link href='#hubungi' className={styles['nav-links-mobile']} onClick={closeMobileMenu}>
-                Hubungi Kami
-              </Link>
-            </li>
           </ul>
-          {
-            desktop && 
-            <Button buttonStyle='btn--outline' linkTo='#hubungi'>
-              Hubungi Kami
-            </Button>
-          }
         </div>
       </nav>
     </>
