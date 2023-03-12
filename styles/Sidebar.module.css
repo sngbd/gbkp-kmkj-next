@@ -1,0 +1,54 @@
+.container {
+  position: absolute;
+  width: 313px;
+  background: #FFFFFF;
+  border-radius: 10.4333px;
+  height: 70vh;
+  overflow: scroll;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 13.0417px 0px 13.0417px 20.8667px;
+  gap: 15.65px;
+  width: 271.27px;
+  background: #FFFFFF;
+  border-radius: 10.4333px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 13.0417px 0px 13.0417px 20.8667px;
+  gap: 15.65px;
+  background: #FFFFFF;
+  border-radius: 10.4333px;
+  width: 271.27px;
+  height: 53.08px;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18.2583px;
+  line-height: 26px;
+  text-decoration: none;
+}
+
+.item:hover {
+  background: #69CDF9;
+  color: white;
+}
+
+.subitem {
+  margin-left: 30px;
+  font-size: 16px;
+}
+
+.button {
+  display: flex;
+  cursor: pointer;
+  justify-content: flex-end;
+  margin-left: 10px;
+}

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { kategorial, renungan, dokumen, profile } from '../utils/MenuItems';
 import Dropdown from './Dropdown';
+import Sidebar from './Sidebar';
 
 function NavItem({ title, menuItems }: any) {
   const [click, setClick] = useState(false);
@@ -34,7 +35,8 @@ function NavItem({ title, menuItems }: any) {
         {!mobile && click && <Dropdown MenuItems={menuItems}/>}
       </div>
     </>    
-  ) }
+  ) 
+}
 
 const NewNavbar = () => {
   return (
@@ -49,6 +51,9 @@ const NewNavbar = () => {
       <NavItem title="Bahan Renungan" menuItems={renungan} />
       <NavItem title="Dokumen" menuItems={dokumen} />
       <Link href="/runggun" className={styles.menu}>Runggun</Link>
+      <div className={styles['sidebar']}>
+        <Sidebar />
+      </div>
     </div>
   );
 }

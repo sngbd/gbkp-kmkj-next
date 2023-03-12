@@ -11,7 +11,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  width: 1232.51px;
+  width: 80vw;
   height: 125.72px;  
   font-family: 'Inter';
   font-style: normal;
@@ -30,11 +30,11 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 677.48px;
+  width: 60vw;
 }
 
 .contact {
-  width: 554.51px;
+  width: 40vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -62,11 +62,22 @@
   justify-content: flex-start;
   padding: 0px;
   gap: 22.36px;
-  width: 212.41px;
+  width: 10vw;
   height: 55.9px;
 }
 
 .logos svg {
   height: 30px;
   margin-left: 22.36px;
+}
+
+@media (max-width: 960px) {
+  .container {
+    height: 400px;
+  }
+  
+  .inner_container {
+    flex-direction: column;
+    height: 200px;
+  }
 }

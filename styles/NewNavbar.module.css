@@ -17,7 +17,6 @@
   align-items: flex-end;
   padding: 0px;
   gap: 4px;
-  width: 243px;
   height: 312px;
 }
 
@@ -76,4 +75,32 @@
   align-items: center;
   color: #898C81;
   margin-bottom: 10px;
+}
+
+.sidebar {
+  display: none;
+}
+
+.sidebutton {
+  display: none;
+}
+
+
+@media (max-width: 960px) {
+  .menu {
+    display: none;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
+  
+  .sidebar {
+    display: flex;
+    font-size: 2.3rem;
+    width: 313px;
+    justify-content: flex-end;
+  }
 }

@@ -14,7 +14,7 @@ const Berita = ({ berita }: any) => {
         berita.map((item: any) => {
           return (
           <>
-            <div className={styles.card}>
+            <div key={item.uid} className={styles.card}>
               <div>
                 <Image className={styles.cardImage} src={item.data['berita'].filter((el: any) => el.type === 'image')[0]?.url || '/blank.jpg'} alt={item.title} width={356} height={254} />
               </div>
