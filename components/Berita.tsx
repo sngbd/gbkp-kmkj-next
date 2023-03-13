@@ -15,8 +15,8 @@ const Berita = ({ berita }: any) => {
           return (
           <>
             <div key={item.uid} className={styles.card}>
-              <div>
-                <Image className={styles.cardImage} src={item.data['berita'].filter((el: any) => el.type === 'image')[0]?.url || '/blank.jpg'} alt={item.title} width={356} height={254} />
+              <div className={styles.cardImage}>
+                <Image src={item.data['berita'].filter((el: any) => el.type === 'image')[0]?.url || '/blank.jpg'} alt={item.title} width={356} height={254} />
               </div>
               <div className={styles.text}>
                 <p className={styles.headline}>{item.data.judul}</p>

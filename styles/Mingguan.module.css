@@ -115,36 +115,7 @@
 }
 
 @media (max-width: 1300px) {
-  .verse2 {
-    margin-left: 0px;
-  }
-
-  .verse3 {
-    margin-left: 0px;
-  }
-}
-
-@media (max-width: 960px) {
   .container {
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    padding: 20px;
-  }
-
-  .title {
-    width: 100%;
-    height: 100%;
-    font-size: 2.5rem;
-  }
-
-  .info {
-    width: 100%;
-    height: 100%;
-    font-size: 1.5rem;
-  }
-  
-  .button {
-    margin-bottom: 40px;
+    display: none;
   }
 }
