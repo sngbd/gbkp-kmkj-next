@@ -4,7 +4,6 @@ import { createClient } from "@/prismicio";
 function KaKr({ results, cover }: any) {
   return (
     <>
-      <Kategorial linkTo="/kategorial/kakr" title="Ka.Kr" kegiatan={results} cover={cover.results[0].data["ka-kr"].url} path='/kategorial/kakr/kegiatan-info' />
     </>
   )
 }
