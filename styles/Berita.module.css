@@ -1,90 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');
+
 .container {
   width: 100%;
-  height: 1312px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-family: 'Inter';
   flex-direction: column;
+  margin-bottom: 138px;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
-  gap: 20px;
-  width: 647px;
-  height: 157px;
-  left: 439px;
-  top: 987px;
   margin-bottom: 70px;
 }
 
 .title {
-  width: 555px;
-  height: 85px;
   font-style: normal;
   font-weight: 600;
-  font-size: 70px;
-  line-height: 85px;
-  color: #000000;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  font-size: 101px;
+  background-image: url('/bg.png');
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: brightness(2.2);
+  margin-bottom: 33.78px;
 }
 
 .desc {
-  width: 647px;
-  height: 52px;
-  font-family: 'Inter';
+  width: 960px;
+  font-family: 'Noto Sans SC';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 160.52%;
+  font-size: 24px;
   text-align: center;
   color: #000000;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 
 .cards {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1080px;
 }
 
 .card {
   display: flex;
-  flex-direction: column;
-  width: 355.97px;
-  height: 524px;
-  left: 181px;
-  top: 1232px;
-  background: #FFFFFF;
-  box-shadow: 0px -7.91042px 79.1042px rgba(0, 0, 0, 0.07), 0px -2.88743px 28.8743px rgba(0, 0, 0, 0.0482987), 0px -1.4018px 14.018px rgba(0, 0, 0, 0.0389404), 0px -0.687186px 6.87186px rgba(0, 0, 0, 0.0310596), 0px -0.271715px 2.71714px rgba(0, 0, 0, 0.0217013);
-  border-radius: 19.7761px;
-  margin: 0px 27px;
+  justify-content: center;
+  align-items: center;
+  width: 19.165rem;
+  height: 27.629rem;
+  border-radius: 26.2089px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
 }
 
-.cardImage {
+.card_main {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 26.2089px;
+  background-size: cover;
+  position: relative;
+  width: 23.438rem;
+  height: 33.788rem;
 }
 
-.cardImage img {
-  width: 356px;
-  height: 254px;
-  border-top-right-radius: 19.7761px;
-  border-top-left-radius: 19.7761px;
+.card_main .inner_card {
+  width: 17.738rem;
+  height: 25.509rem;
+}
+
+.card_main .inner_card .title {
+  font-size: 1.635rem;
+  width: 283.76px;
+}
+
+.card_main .inner_card .description {
+  font-size: 0.935rem;
+  width: 283.76px;
+  height: 98.68px;
+}
+
+.card_main .baca {
+  width: 7.869rem;
+  height: 2.466rem;
+  font-size: 0.973rem;
+}
+
+.tint {
+  width: 100%;
+  height: 100%;
+  background: #0B0706;
+  opacity: 0.5;
+  border-radius: 26.2089px;
+  position: absolute;
+}
+
+.inner_card {
+  width: 14.504rem;
+  height: 20.838rem;
+  color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .text {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+}
+
+.text .title {
+  width: 232.04px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21.3972px;
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+.text .description {
+  width: 232.04px;
+  height: 80.69px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.227px;
+  line-height: 160%;
+  color: #FFFFFF;
 }
 
 .headline {
@@ -103,25 +154,22 @@
   align-items: center;
 }
 
-.button {
+.baca {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 7.20899px 21.627px;
-  gap: 7.21px;
-  width: 143.58px;
-  height: 37px;
-  left: 106px;
-  top: 449px;
-  background: #69CDF9;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 22.6418px;
-  font-family: 'Inter';
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
+  justify-content: center;
+  gap: 15.3px;
+  width: 6.426rem;
+  height: 2rem;
+  background: linear-gradient(100.11deg, #0EAE88 0%, #1350C7 100%);
+  box-shadow: 0px 1.52969px 4.58906px rgba(0, 0, 0, 0.15);
+  border-radius: 1.875rem;
   color: white;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.75rem;
   text-decoration: none;
 }
 
@@ -182,11 +230,6 @@
     width: 356px;
     height: 254px;
     border-radius: 0px;
-  }
-  
-  .card {
-    width: 100%;
-    margin: 15px 0px;
   }
   
   .text {

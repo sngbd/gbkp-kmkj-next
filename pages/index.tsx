@@ -1,26 +1,18 @@
 import { createClient } from '@/prismicio'
-import HeroSection from '@/components/HeroSection'
-import Cards from '@/components/Cards'
 import Hero from '@/components/Hero';
 import Berita from '@/components/Berita';
 import Mingguan from '@/components/Mingguan';
 import Personalia from '@/components/Personalia';
+import Info from '@/components/Info';
 
-const Home = ({ berita, personalia }: any) => {
+const Home = ({ berita, bpmk }: any) => {
   return ( 
     <>
-      {/* <HeroSection 
-        cName='hero-container'
-        image='/images/gbkp-kmk.jpeg'
-        alt='gereja'
-        title='GBKP KMKJ'
-        desc='Gereja Batak Karo Protestan Klasis Medan Kutajurung'
-      /> */}
-      <Hero />
+      <Hero title="GBKP Klasis Medan Kutajurung" left="Hubungi Kami" right="Lokasi Kantor" />
+      <Info />
       <Berita berita={berita.results.slice(0, 3)} />
       <Mingguan />
-      <Personalia personalia={personalia.results[0].data.personalia} />
-      {/* <Cards content={results} /> */}
+      <Personalia bpmk={bpmk.results[0].data.bpmk} />
     </>
   );
 }
@@ -29,10 +21,10 @@ export async function getServerSideProps() {
   const client = createClient()
 
   const berita = await client.getByType('berita')
-  const personalia = await client.getByType('personalia')
+  const bpmk = await client.getByType('bpm')
 
   return {
-    props: { berita, personalia }
+    props: { berita, bpmk }
   }
 }
 

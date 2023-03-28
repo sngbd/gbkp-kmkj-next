@@ -12,7 +12,7 @@ const BahanPA = ({ judul, bahanPa }: any) => {
           return (
             <>
               <div className={styles["item"]}>
-                <Link href={`/${kategorial}/bahan-pa/${j.uid}`}>
+                <Link href={`/kategorial/${kategorial}/bahan-pa/${j.uid}`}>
                   {j.data.judul}
                 </Link>
               </div>

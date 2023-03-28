@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./.slicemachine/prismicio.d.ts", "utils/MenuItems.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./.slicemachine/prismicio.d.ts", "pages/renungan/MenuItems.ts"],
   "exclude": ["node_modules"]
 }

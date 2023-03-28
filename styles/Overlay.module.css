@@ -1,0 +1,14 @@
+.container {
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 550px;
+  transform: translate(-50%, 0%);
+}
+
+.profiles_container {
+  box-sizing: border-box;
+  position: absolute;
+  top: 550px;
+  width: 100%;
+}

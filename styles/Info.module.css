@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Hind+Siliguri:wght@500;700&family=Poppins&display=swap');
+
+.container {
+  height: 38.125rem;
+  margin-top: 4.375rem;
+  display: flex;
+  justify-content: center;
+}
+
+.infos {
+  width: 73.875rem;
+  height: 22.5rem;
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.statistic {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 12.9448px rgba(0, 0, 0, 0.04);
+  border-radius: 12.9448px;
+  display: flex;
+  flex-direction: column;
+  width: 16.206rem;
+  height: 9.918rem;
+  padding-left: 1.296rem;
+}
+
+.statistic .title {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17.2597px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #358E9D;
+  margin-bottom: 0.158rem;
+  margin-top: 1.068rem;
+}
+
+.statistic .number {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 51.7791px;
+  line-height: 84px;
+  color: #454256;
+}

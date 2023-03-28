@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Open+Sans:wght@600&display=swap');
+
+.container {
+  height: 1723px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 550px;
+  transform: translate(-50%, 0%);
+}
+
+.featured {
+  width: 1210px;
+  height: 299.91px;
+  background: #FFFFFF;
+  border-radius: 8.2735px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 45px;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.image {
+  border-radius: 8.2735px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 692.91px;
+  height: 297.85px;
+  object-fit: cover;
+}
+
+.text {
+  width: 517.09px;
+  height: 297.85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px; 
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 222px;
+}
+
+.label {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12.4103px;
+  line-height: 22px;
+  letter-spacing: 0.155128px;
+  color: #919191;
+}
+
+.title {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24.8205px;
+  line-height: 37px;
+  letter-spacing: 0.155128px;
+  color: #000000;
+}
+
+.body {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16.547px;
+  line-height: 22px;
+  letter-spacing: 0.155128px;
+  color: #909090;
+  margin-bottom: 34px;
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  height: 22px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16.547px;
+  line-height: 22px;
+  letter-spacing: 0.155128px;
+  color: #000000; 
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1210px;
+  justify-content: space-between;
+  margin-bottom: 133px;
+  gap: 50px 15px;
+}
+
+.card {
+  width: 370px;
+  height: 498px;
+  background: #FFFFFF;
+  border: 1px solid #EEECEC;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.cardContent {
+  padding: 24px;
+  padding-top: 16px;
+}
+
+.cardImage {
+  width: 370px;
+  height: 180px; 
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  object-fit: cover;
+}
+
+.cardTitle {
+  width: 322px;
+  height: 108px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21.3972px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.cardBody {
+  width: 322px;
+  height: 84px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.108714px;
+  color: #909090;
+  margin-bottom: 32px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 7.97px;
+  height: 51px;
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15.94px;
+  width: 51px;
+  height: 51px;
+  background: #FFFFFF;
+  border: 1.59375px solid #F1F1F1;
+  border-radius: 51px; 
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20.7188px;
+  line-height: 28px;
+  text-decoration: none;
+}
+
+.circle_selected {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15.94px;
+  width: 51px;
+  height: 51px;
+  background: #2F80ED;
+  border-radius: 51px; 
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20.7188px;
+  line-height: 28px;
+  color: white;
+  text-decoration: none;
+}
+
+.square {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15.9375px;
+  gap: 15.94px;
+  width: 51px;
+  height: 51px;
+  background: #FFFFFF;
+  border-radius: 12.75px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20.7188px;
+  line-height: 28px;
+}
+
+.img {
+  object-fit: cover;
+  transition: transform 0.9s ease-in-out, transform-origin 0.9s ease-in-out;
+}
+
+.featured_img_parent {
+  width: 692.91px;
+  height: 297.85px;
+  overflow: hidden;
+}
+
+.img_parent {
+  width: 370px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.img:hover {
+  transform: scale(1.2);
+  transform-origin: bottom right;
+}

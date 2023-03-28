@@ -1,0 +1,30 @@
+.container {
+  height: 1366px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 81.2512px;
+  background-image: url('/bg.png');
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: brightness(2.2);
+}
+
+.subtitle {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 32.4883px;
+  display: flex;
+  align-items: center; 
+  margin-bottom: 73px;
+}

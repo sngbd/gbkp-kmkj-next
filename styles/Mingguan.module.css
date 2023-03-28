@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 .container {
-  height: 791px;
-  left: -1px;
-  top: 2030px;
+  height: 65.563rem;
   background: #F7FAFF;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Inter';
+  background: url(/bg.png);
+  background-size: cover;
+  position: relative;
 }
 
 .title {
@@ -17,9 +18,10 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
-  font-size: 60.1468px;
+  font-size: 5rem;
   line-height: 73px;
   margin-bottom: 25px;
+  color: white;
 }
 
 .info {
@@ -28,9 +30,9 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.43rem;
   line-height: 44px;
-  color: #000000;
+  color: #D4D4D4;
 }
 
 .button {
@@ -38,19 +40,20 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 210px;
-  height: 46px;
+  width: 19.141rem;
+  height: 3.696rem;
   background: #69CDF9;
   box-shadow: 0px 1.38812px 2.77624px rgba(0, 0, 0, 0.25);
   border-radius: 28.4565px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 1.43rem;
   line-height: 23px;
   text-align: center;
   color: #FFFFFF;
   text-decoration: none;
+  background: linear-gradient(100.11deg, #0EAE88 0%, #1350C7 100%);
 }
 
 .left {
@@ -63,7 +66,7 @@
   align-items: flex-start;
   justify-content: space-between;
   width: 706.79px;
-  height: 613.19px;
+  height: 48.188rem;
   left: 598px;
   top: 40px;
 }
@@ -71,13 +74,21 @@
 .verse {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  width: 518.79px;
-  height: 145.06px;
+  width: 38.829rem;
+  height: 10.793rem;
   background: #FFFFFF;
   box-shadow: 0px 16.4723px 109.815px rgba(0, 0, 0, 0.07), 0px 2.06258px 13.7506px rgba(0, 0, 0, 0.035);
   border-radius: 13.9272px;
+}
+
+.content {
+  display: flex;
+  width: 34.625rem;
+  height: 6.6rem;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .verse2 {
@@ -89,29 +100,24 @@
 }
 
 .bible_verse {
-  width: 116px;
-  height: 23px;
+  display: flex;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 900;
-  font-size: 19.498px;
+  font-size: 1.4rem;
   line-height: 23px;
   text-align: right;
   color: #1F2027;
-  margin-left: 28px;
 }
 
 .text {
-  width: 463.08px;
-  height: 58px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 12.5344px;
+  font-size: 1rem;
   line-height: 19px;
   text-align: right;
   color: #1F2027;
-  margin-left: 27px;
 }
 
 @media (max-width: 1300px) {

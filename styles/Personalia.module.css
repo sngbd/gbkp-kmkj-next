@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Inter:wght@200&family=Open+Sans:wght@600&display=swap');
 
 .container {
   width: 100%;
-  height: 1246px;
+  height: 1523px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,45 +13,102 @@
 .header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 0px;
-  gap: 20px;
-  height: 157px;
-  left: 439px;
-  top: 987px;
-  margin-bottom: 70px;
+  gap: 50px;
+  width: 849px;
+  height: 230px;
+  margin-bottom: 97px;
 }
 
 .title {
-  height: 85px;
+  width: 849px;
+  height: 146px;
   font-style: normal;
   font-weight: 600;
-  font-size: 70px;
-  line-height: 85px;
-  color: #000000;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  font-size: 6.25rem;
+  background-image: url('/bg.png');
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: brightness(2.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .desc {
-  width: 647px;
-  height: 52px;
+  width: 832px;
+  height: 84px;
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 160.52%;
+  font-weight: 200;
+  font-size: 48px;
+  line-height: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  color: #000000;
 }
 
 .image {
   width: 271px;
   height: 265px;
-  left: 0px;
-  top: 93.01px;
+}
+
+.left img {
+  width: 188px;
+  height: 188px;
+  border-radius: 100px;
+}
+
+.right {
+  width: 373px;
+  height: 113px;
+}
+
+.nama {
+  width: 372px;
+  height: 27px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 0px;
+  display: flex;
+  align-items: center;
+  color: #252F40;
+}
+
+.jabatan {
+  width: 372px;
+  height: 26px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 0px;
+  display: flex;
+  align-items: center;
+  color: #17C1E8;
+}
+
+.phone {
+  width: 372px;
+  height: 52px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #67748E;
+}
+
+.phone img {
+  margin-right: 5px;
 }
 
 .profile img {
@@ -59,28 +116,35 @@
 }
 
 .profiles {
-  width: 956.4px;
+  height: 710px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .profiles2 {
-  width: 956.4px;
-  margin-top: 71px;
+  height: 465px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container_profile {
+  width: 1272px;
+  display: flex;
   justify-content: space-between;
 }
 
 .profile {
-  width: 271.03px;
-  height: 340.09px;
-  left: 0px;
-  top: 93.01px;
-  filter: drop-shadow(0px 27.8911px 132.258px rgba(139, 139, 139, 0.07))
-          drop-shadow(0px 6.22985px 29.5415px rgba(139, 139, 139, 0.0417275))
-          drop-shadow(0px 1.85479px 8.79528px rgba(139, 139, 139, 0.0282725));
+  width: 624px;
+  height: 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  background-color: #fff;
 }
 
 .info {
@@ -136,42 +200,4 @@
   line-height: 27px;
   text-align: center;
   color: #FFFFFF;
-}
-
-@media (max-width: 960px) {
-  .container {
-    height: 100%;
-    padding: 40px 0px;
-  }
-
-  .profiles {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profiles2 {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .header {
-    width: 100%;
-    height: 100%;
-  }
-
-  .title {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: 2.3rem;
-  }
-
-  .desc {
-    width: 100%;
-    height: 100%;
-    font-size: 1.4rem;
-  }
 }

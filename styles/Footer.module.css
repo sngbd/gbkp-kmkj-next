@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 256px;
-  background: #F7FAFF;
+  background: #1F1F1F;
 }
 
 .inner_container {
@@ -18,7 +18,7 @@
   font-weight: 400;
   font-size: 22.3585px;
   line-height: 27px;
-  color: #2D2E2E;
+  color: #67748E;
 }
 
 .inner_container p {
@@ -52,7 +52,7 @@
   font-weight: 600;
   font-size: 22.3585px;
   line-height: 27px;
-  color: #2D2E2E;
+  color: #67748E;
 }
 
 .logos {

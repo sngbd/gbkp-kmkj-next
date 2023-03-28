@@ -1,59 +1,14 @@
 import styles from '@/styles/Personalia.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
+import ProfileCards from './ProfileCards';
 
-const Personalia = ({ personalia }: any) => {
+const Personalia = ({ bpmk }: any) => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1 className={styles.title}>Personalia</h1>
-        <p className={styles.desc}>Lorem ipsum dolor sit amet consectetur. Sed tincidunt eget morbi congue nunc enim. Venenatis sapien sit eget urna. Egestas</p>
+        <h1 className={styles.title}>BPMK Kutajurung</h1>
+        <p className={styles.desc}>Badan Pekerja Majelis Klasis</p>
       </div>
-      <div className={styles.profiles}>
-        {
-          personalia.slice(0, 3).map((item: any) => {
-            return (
-              <>
-                <div className={styles.profile}>
-                  <div className={styles.image}>
-                    <Image src={item.foto.url} alt="profile" width={271} height={265} />
-                  </div>
-                  <div className={styles.info}>
-                    <div className={styles.text}>
-                      <p className={styles.name}>{item.nama}</p>
-                      <p className="church">{item.tempat_pelayanan}</p>
-                    </div>
-                  </div>
-                </div>
-              </>
-            )
-          })
-        }
-      </div>
-      <div className={styles.profiles2}>
-        {
-          personalia.slice(3, 6).map((item: any) => {
-            return (
-              <>
-                <div className={styles.profile}>
-                  <div className={styles.image}>
-                    <Image src={item.foto.url} alt="profile" width={271} height={265} />
-                  </div>
-                  <div className={styles.info}>
-                    <div className={styles.text}>
-                      <p className={styles.name}>{item.nama}</p>
-                      <p className="church">{item.tempat_pelayanan}</p>
-                    </div>
-                  </div>
-                </div>
-              </>
-            )
-          })
-        }
-      </div>
-      <Link href="/personalia" className={styles.button}>
-        <p>Lihat Semua Personalia</p>
-      </Link>
+      <ProfileCards profiles={bpmk} />
     </div>
   );
 }

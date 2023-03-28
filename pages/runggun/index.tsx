@@ -1,27 +1,31 @@
-import styles from '@/styles/Cards.module.css';
+import styles from '@/styles/RunggunList.module.css';
 import Link from 'next/link';
 import Page from '@/components/Page';
 import { createClient } from '@/prismicio';
+import HeroSection from '@/components/HeroSection';
 
 function Runggun({ results }: any) {
   return (
     <>
-      <div className={styles['article']}>
-        <Page title="Runggun" content={
-          <ol> {
+      <HeroSection title="Runggun" subTitle="GBKP Klasis Medan Kutajurung" />
+      <div className={styles['container']}>
+        <div className={styles['inner']}>
+          {
             results.map((r: any) => {
-              const link = `/runggun/${r.uid}`
               return (
-                <li key={r.id} className='mb-3.5'>
-                  <Link href={link}>
-                    {r.data.nama_runggun}
-                  </Link>
-                </li>
+              <>
+                <div className={styles['item']}>
+                  <div className={styles['border']}>
+                    <Link key={r.id} className={styles['button']} href={`/runggun/${r.uid}`}>
+                      {r.data.nama_runggun}
+                    </Link>
+                  </div>
+                </div>
+              </>
               )
             })
           }
-          </ol>
-        } />
+        </div>
       </div>
     </>
   )
