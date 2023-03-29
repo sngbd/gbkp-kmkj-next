@@ -1,6 +1,4 @@
 import HeroSection from '@/components/HeroSection';
-import Page from '@/components/Page';
-import Profile from '@/components/Profile';
 import ProfileCards from '@/components/ProfileCards';
 import { createClient } from '@/prismicio';
 import overlayStyles from '@/styles/Overlay.module.css'
