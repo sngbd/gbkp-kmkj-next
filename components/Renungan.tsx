@@ -1,31 +1,35 @@
-import Link from 'next/link';
-import styles from '@/styles/BahanPA.module.css';
-import Page from './Page';
+import styles from '@/styles/Renungan.module.css'
 
-const Renungan = ({ judul, path, bahanRenungan }: any) => {
-  const content = (
-    <div className={styles["list-pa"]}>
-      {
-        bahanRenungan.map((j: any) => {
-          return (
-            <>
-              <div className={styles["item"]}>
-                <Link href={`${path}/${j.uid}`}>
-                  {j.data.judul}
-                </Link>
-              </div>
-            </>
-          )
-        })
-      }
-    </div>
-  )
-
+function Renungan({ renungan, refr, type }: any) {
   return (
     <>
-      <Page title={judul} content={content} />
+      <div className={styles.overlay_container} ref={refr}>
+        <div className={styles.overlay_section}>
+          <div className={styles.content}>
+            <div className={styles.date}>
+              {renungan.tanggal}
+            </div>
+            <div className={styles.title}>
+              {renungan.judul}
+            </div>
+            {
+              renungan[type].map((item: any) => {
+                if (item.type === "paragraph") {
+                  return (
+                    <>
+                      <div className={styles.text}>
+                        {item.text}
+                      </div>
+                    </>
+                  )
+                }
+              })
+            }
+          </div>
+        </div>
+      </div>
     </>
-  );
+  )
 }
 
 export default Renungan;

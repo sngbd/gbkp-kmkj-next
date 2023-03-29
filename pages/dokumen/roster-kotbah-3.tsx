@@ -1,15 +1,14 @@
-import Page from '@/components/Page';
+import Document from '@/components/Document';
 import { createClient } from '@/prismicio';
-import styles from '@/styles/Cards.module.css'
 
 function Roster({ results }: any) {
   return (
     <>
-      <div className={styles['article']}>
-        <Page title="Roster Kotbah Minggu ke-3" content={
-          <iframe src={results[0].data.roster_pdf.url} width="1000" height="1000" title="roster"/>
-        } />
-      </div>
+      <Document 
+        document={<iframe src={results[0].data.roster_pdf.url} width="1000" height="1000" title="laporan" />} 
+        title="Roster Minggu 3"
+        subtitle="GKBP KMKJ"
+      />
     </>
   );
 }

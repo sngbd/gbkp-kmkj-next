@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Hero = ({ title, left, leftLink = "/", right, rightLink = "/", bg }: any) => {
   return (
     <>
-      <div className={styles.container} style={bg ? { backgroundImage: `url(${bg})` } : {}}>
+      <div className={styles.container} style={bg ? { backgroundImage: `linear-gradient(75.33deg, rgba(0, 0, 0, 0.5) -10.41%, rgba(0, 0, 0, 0) 62.93%), url(${bg})` } : {}}>
         <div className={styles.inner}>
           <div className={styles.title}>{title}</div>
           <div className={styles.buttons}>

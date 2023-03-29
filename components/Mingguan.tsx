@@ -14,7 +14,7 @@ const Hero = () => {
       <div className={styles.left}>
         <h1 className={styles.title}>Bahan Renungan</h1>
         <p className={styles.info}>Lorem ipsum dolor sit amet consectetur. Sed tincidunt eget morbi congue nunc enim. </p>
-        <Link href="/harian" className={styles.button}>Lihat Bahan Renungan</Link>
+        <Link href="/renungan" className={styles.button}>Lihat Bahan Renungan</Link>
       </div>
       <div className={styles.verses}>
         <div className={styles.verse}>

@@ -4,7 +4,11 @@ import { createClient } from '@/prismicio';
 function Laporan({ results }: any) {
   return (
     <>
-      <Document document={<iframe src={results[0].data.laporan.url} width="1000" height="1000" title="laporan" />} />
+      <Document 
+        document={<iframe src={results[0].data.laporan.url} width="1000" height="1000" title="laporan" />} 
+        title="Laporan Keuangan"
+        subtitle="Laporan Keuangan GKBP KMKJ"
+      />
     </>
   );
 }

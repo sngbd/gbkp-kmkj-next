@@ -5,6 +5,7 @@
   background: linear-gradient(75.33deg, rgba(0, 0, 0, 0.5) -10.41%, rgba(0, 0, 0, 0) 62.93%), url(/bg.png);
   width: 100%;
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +43,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
-  font-size: 131.538px;
+  font-size: 6rem;
   line-height: 190px;
   color: #FFFFFF;
 }

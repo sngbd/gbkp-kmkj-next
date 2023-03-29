@@ -1,0 +1,58 @@
+.overlay_container {  
+  display: flex;
+  justify-content: center;
+}
+
+.overlay_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 1134.82px;
+  padding: 23px 0px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 35.1px;
+  width: 1088.02px;
+}
+
+.date {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21.5813px;
+  line-height: 180%;
+  letter-spacing: 0.03em;
+  color: #A6A6A6;
+}
+
+.title {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 49.4572px;
+  line-height: 140%;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.text {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20.4656px;
+  line-height: 180%;
+  text-align: justify;
+  letter-spacing: 0.03em;
+  text-indent: 89.9221px;
+  color: #3A3A3A;
+}
+
+.img {
+  object-fit: cover;
+}

@@ -1,20 +1,19 @@
-import { createClient } from "@/prismicio";
 import { GetServerSidePropsContext } from "next";
-import styles from '@/styles/Cards.module.css'
-import Page from "@/components/Page";
-import Profile from "@/components/Profile";
-import profileStyles from '@/styles/ProfileCard.module.css';
+import HeroSection from "@/components/HeroSection";
+import overlayStyles from '@/styles/Overlay.module.css'
+import ProfileCards from "@/components/ProfileCards";
+import { createClient } from "@/prismicio";
 
 function Runggun({ data }: any) {
+  const rowLength = Math.round(data.bpmr.length / 2);
+
   return (
     <>
-      <div className={styles['article']}>
-        <Page title={`BPMR ${data.nama_runggun}`} cardStyle='cards__profile' content={
-          <div className={profileStyles['profiles-container']}>
-            {data.bpmr.map((item: any) => <Profile key={item.nama} profile={item} />)}
-          </div>
-        } />
-      </div>
+      <HeroSection title={data.nama_runggun} subTitle="Kategorial GBKP KMKJ" height={rowLength * 220 + (rowLength - 1) * 25} overlay={
+        <div className={overlayStyles['profiles_container']}>
+          <ProfileCards profiles={data.bpmr} />
+        </div>
+      } />
     </>
   )
 }

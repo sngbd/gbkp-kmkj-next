@@ -1,6 +1,5 @@
 import styles from '@/styles/RunggunList.module.css';
 import Link from 'next/link';
-import Page from '@/components/Page';
 import { createClient } from '@/prismicio';
 import HeroSection from '@/components/HeroSection';
 

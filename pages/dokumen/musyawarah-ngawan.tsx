@@ -1,15 +1,14 @@
-import Page from '@/components/Page';
+import Document from '@/components/Document';
 import { createClient } from '@/prismicio';
-import styles from '@/styles/Cards.module.css'
 
 function Musyawarah({ results }: any) {
   return (
     <>
-      <div className={styles['article']}>
-        <Page title="Musyawarah Ngawan" content={
-          <iframe src={results[0].data.musyawarah.url} width="1000" height="1000" title="musyawarah"/>
-        } />
-      </div>
+      <Document 
+        document={<iframe src={results[0].data.musyawarah.url} width="1000" height="1000" title="laporan" />} 
+        title="Musyawarah Ngawan"
+        subtitle="GKBP KMKJ"
+      />
     </>
   );
 }
