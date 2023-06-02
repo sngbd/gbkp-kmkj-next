@@ -18,7 +18,9 @@ function Renungan({ renungan, refr, type }: any) {
                   return (
                     <>
                       <div className={styles.text}>
-                        {item.text}
+                        <pre>
+                          {item.text}
+                        </pre>
                       </div>
                     </>
                   )
