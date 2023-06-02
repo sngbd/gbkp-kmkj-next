@@ -13,8 +13,19 @@ function Renungan({ renungan, refr, type }: any) {
               {renungan.judul}
             </div>
             {
-              renungan[type].map((item: any) => {
+              renungan[type].map((item: any, i: number) => {
                 if (item.type === "paragraph") {
+                  if (i == 0 || i == 1) {
+                    return (
+                      <>
+                        <div className={styles.text}>
+                          <pre>
+                            {item.text}
+                          </pre>
+                        </div>
+                      </>
+                    )
+                  }
                   return (
                     <>
                       <div className={styles.text}>
