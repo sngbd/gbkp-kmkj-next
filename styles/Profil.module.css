@@ -75,6 +75,14 @@
 }
 
 .image img {
+  width: 259.3px;
+  height: 126.14px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .9s ease-in-out;
+}
+
+.image img {
   border-radius: 13.1203px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;

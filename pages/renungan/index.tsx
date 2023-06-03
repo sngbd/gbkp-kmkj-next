@@ -1,8 +1,10 @@
+import { createClient } from '@/prismicio';
 import styles from '@/styles/Profil.module.css'
+import { GetServerSidePropsContext } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function Renungan() {
+function Renungan({ results }: any) {
   return (
     <>
       <div className={styles['container']}>
@@ -11,7 +13,7 @@ function Renungan() {
         <div className={styles['menus']}>
           <Link href="/renungan/kotbah-minggu" className={styles['menu']}>
             <div className={styles['image']}>
-              <Image alt="image" src="/renungan/1.png" layout='fill' />
+              <Image alt="kotbah-minggu" src={results[0].data.khotbah_minggu.url} layout='fill' />
             </div>
             <div className={styles['text_container']}>
               <div className={styles['label']}>Renungan</div>
@@ -24,7 +26,7 @@ function Renungan() {
           </Link>
           <Link href="/renungan/pjj" className={styles['menu']}>
             <div className={styles['image']}>
-              <Image alt="image" src="/renungan/2.png" layout='fill' />
+              <Image alt="pjj" src={results[0].data.pjj.url} layout='fill' />
             </div>
             <div className={styles['text_container']}>
               <div className={styles['label']}>Renungan</div>
@@ -37,7 +39,7 @@ function Renungan() {
           </Link>
           <Link href="/renungan/pekan-pekan" className={styles['menu']}>
             <div className={styles['image']}>
-              <Image alt="image" src="/renungan/3.png" layout='fill' />
+              <Image alt="pekan-pekan" src={results[0].data.pekan.url} layout='fill' />
             </div>
             <div className={styles['text_container']}>
               <div className={styles['label']}>Renungan</div>
@@ -50,7 +52,7 @@ function Renungan() {
           </Link>
           <Link href="/renungan/harian" className={styles['menu']}>
             <div className={styles['image']}>
-              <Image alt="image" src="/renungan/4.png" layout='fill' />
+              <Image alt="harian" src={results[0].data.harian.url} layout='fill' />
             </div>
             <div className={styles['text_container']}>
               <div className={styles['label']}>Renungan</div>
@@ -65,6 +67,16 @@ function Renungan() {
       </div>
     </>
   );
+}
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const client = createClient();
+  
+  const { results } = await client.getByType('cover_renungan');
+
+  return {
+    props: { results },
+  }
 }
 
 export default Renungan;

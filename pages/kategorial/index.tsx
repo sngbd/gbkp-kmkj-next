@@ -1,8 +1,10 @@
 import styles from '@/styles/Profil.module.css'
+import { GetServerSidePropsContext } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { createClient } from '@/prismicio';
 
-function Kategorial() {
+function Kategorial({ results }: any) {
   return (
     <>
       <div className={styles['container']}>
@@ -11,7 +13,7 @@ function Kategorial() {
         <div className={styles['menus5']}>
           <Link href="/kategorial/mamre" className={styles['menu']}>
             <div className={styles['image']}>
-              <Image alt="image" src="/kategorial/1.jpg" layout='fill' />
+              <Image alt="mamre" src={results[0].data.mamre.url} layout='fill' />
             </div>
             <div className={styles['text_container']}>
               <div className={styles['label']}>Kategorial</div>
@@ -24,7 +26,7 @@ function Kategorial() {
           </Link>
           <Link href="/kategorial/moria" className={styles['menu']}>
             <div className={styles['image']}>
-              <Image alt="image" src="/kategorial/2.jpg" layout='fill' />
+              <Image alt="moria" src={results[0].data.moria.url} layout='fill' />
             </div>
             <div className={styles['text_container']}>
               <div className={styles['label']}>Kategorial</div>
@@ -37,7 +39,7 @@ function Kategorial() {
           </Link>
           <Link href="/kategorial/permata" className={styles['menu']}>
             <div className={styles['image']}>
-              <Image alt="image" src="/kategorial/3.jpg" layout='fill' />
+              <Image alt="permata" src={results[0].data.permata.url} layout='fill' />
             </div>
             <div className={styles['text_container']}>
               <div className={styles['label']}>Kategorial</div>
@@ -50,7 +52,7 @@ function Kategorial() {
           </Link>
           <Link href="/kategorial/kakr" className={styles['menu']}>
             <div className={styles['image']}>
-              <Image alt="image" src="/kategorial/4.jpg" layout='fill' />
+              <Image alt="ka-kr" src={results[0].data.kakr.url} layout='fill' />
             </div>
             <div className={styles['text_container']}>
               <div className={styles['label']}>Kategorial</div>
@@ -63,7 +65,7 @@ function Kategorial() {
           </Link>
           <Link href="/kategorial/saitun" className={styles['menu']}>
             <div className={styles['image']}>
-              <Image alt="image" src="/kategorial/5.jpg" layout='fill' />
+              <Image alt="saitun" src={results[0].data.saitun.url} layout='fill' />
             </div>
             <div className={styles['text_container']}>
               <div className={styles['label']}>Kategorial</div>
@@ -78,6 +80,16 @@ function Kategorial() {
       </div>
     </>
   );
+}
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const client = createClient();
+  
+  const { results } = await client.getByType('cover');
+
+  return {
+    props: { results },
+  }
 }
 
 export default Kategorial;
