@@ -12,7 +12,7 @@ function ListArticles({ articles, link, title }: any) {
           articles.map((item: any, index: number) => {
             return (
               <Link key={index} className={styles.border} href={`${link}${item.uid}`}>
-                <div className={styles.item}>{item.data.tanggal}</div>
+                <div className={styles.item}>{item.data.judul}</div>
               </Link>
             )
           })
