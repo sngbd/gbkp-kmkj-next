@@ -1,25 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Hind+Siliguri:wght@500;700&family=Poppins&display=swap');
 
 .container {
-  height: 38.125rem;
+  margin-bottom: 15.125rem;
   margin-top: 4.375rem;
   display: flex;
   justify-content: center;
 }
 
 .infos {
-  width: 73.875rem;
-  height: 22.5rem;
   filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.info {
-  display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  padding: 0rem 10rem;
 }
 
 .statistic {
@@ -53,4 +48,10 @@
   font-size: 51.7791px;
   line-height: 84px;
   color: #454256;
+}
+
+@media (max-width: 960px) {
+  .infos {
+    padding: 0;
+  }
 }
