@@ -4,7 +4,7 @@ import { GetServerSidePropsContext } from "next";
 import kategorial from "@/helpers/Kategorial";
 import { createClient } from "@/prismicio";
 
-function Kategorial({ kategori, title, results }: any) {
+function Kategorial({ kategori, title, results, filtBerita }: any) {
   return (
     <>
       <Hero
@@ -15,7 +15,7 @@ function Kategorial({ kategori, title, results }: any) {
         rightLink={kategori.rightLink}
         bg={results[0].data[title].url}
       />
-      <Kegiatan subheader={kategori.subheader} />
+      <Kegiatan subheader={kategori.subheader} filtBerita={filtBerita} />
     </>
   )
 }
@@ -23,7 +23,7 @@ function Kategorial({ kategori, title, results }: any) {
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   const title: any = context.params!.kategorial;
 
-  let kategori;
+  let kategori: any;
   if (title === 'mamre')
     kategori = kategorial.mamre;
   else if (title === 'moria')
@@ -38,9 +38,12 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   const client = createClient();
   
   const { results } = await client.getByType('cover');
+  const berita = await client.getByType('berita');
+  
+  const filtBerita = berita.results.filter((b: any) => b.data.kategori === kategori.title);
 
   return {
-    props: { kategori, title, results },
+    props: { kategori, title, results, filtBerita },
   }
 }
 

@@ -8,10 +8,10 @@ const kategorial = {
     bahanPa: 'bahan-pa-mamre',
   },
   kakr: {
-    title: 'Ka.Kr',
+    title: 'Ka-Kr',
     leftLink: '/kategorial/kakr/kepengurusan',
     rightLink: '/kategorial/kakr/bahan-pa',
-    subheader: 'Ka.Kr GBKP KMKJ',
+    subheader: 'Ka-Kr GBKP KMKJ',
     kepengurusan: 'kepengurusan-kakr',
     bahanPa: 'bahan-pa-ka.kr',
   },

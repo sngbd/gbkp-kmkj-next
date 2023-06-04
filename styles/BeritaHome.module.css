@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Open+Sans:wght@600&display=swap');
 
 .container {
-  height: 1723px;
   display: flex;
   flex-direction: column;
   align-items: center;

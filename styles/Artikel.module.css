@@ -36,6 +36,17 @@
   color: #A6A6A6;
 }
 
+.kategori {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21.5813px;
+  line-height: 180%;
+  letter-spacing: 0.03em;
+  color: #A6A6A6;
+  margin-top: -2rem;
+}
+
 .title {
   font-family: 'Avenir';
   font-style: normal;

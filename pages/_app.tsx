@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 import Head from 'next/head'
 import NewNavbar from '@/components/NewNavbar'
 import styles from '@/styles/Global.module.css';
+import { createClient } from '@/prismicio'
 config.autoAddCss = false
 
 function Layout({ children }: { children: ReactElement }) {

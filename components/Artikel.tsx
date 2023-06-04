@@ -11,6 +11,11 @@ function Artikel({ berita, refr }: any) {
             <div className={styles.date}>
               {berita.tanggal}
             </div>
+            {berita.kategori ? 
+            <div className={styles.kategori}>
+              Kategori: {berita.kategori}
+            </div> : ""
+            }
             <div className={styles.title}>
               {berita.judul}
             </div>

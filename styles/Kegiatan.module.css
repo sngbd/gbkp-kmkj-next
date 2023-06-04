@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Open+Sans:wght@600&display=swap');
 
 .container {
-  height: 1308px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10rem;
 }
 
 .inner_container {
-  width: 1210px;
-  height: 972px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,9 +42,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 1210px;
-  height: 1050px;
   justify-content: space-between;
-  margin-bottom: 133px;
 }
 
 .card {
@@ -158,4 +154,10 @@
   font-weight: 600;
   font-size: 20.7188px;
   line-height: 28px;
+}
+
+.img_parent {
+  width: 370px;
+  height: 180px;
+  overflow: hidden;
 }

@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 256px;
   background: #1F1F1F;
+  height: 256px;
 }
 
 .inner_container {
@@ -30,11 +30,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 60vw;
+  width: 20rem;
+  margin-right: 5rem;
 }
 
 .contact {
-  width: 40vw;
+  width: 35rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -79,6 +80,7 @@
   
   .inner_container {
     flex-direction: column;
+    justify-content: center;
     height: 200px;
   }
   

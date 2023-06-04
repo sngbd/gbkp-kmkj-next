@@ -1,7 +1,10 @@
 import styles from '@/styles/Kegiatan.module.css';
+import beritaStyles from '@/styles/BeritaHome.module.css';
+import buttonStyles from '@/styles/Berita.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
-function Kegiatan({ subheader }: any) {
+function Kegiatan({ subheader, filtBerita }: any) {
   return (
     <>
       <div className={styles.container}>
@@ -9,63 +12,46 @@ function Kegiatan({ subheader }: any) {
           <div className={styles.header}>Kegiatan dan Informasi</div>
           <div className={styles.subheader}>{subheader}</div>
           <div className={styles['cards']}>
-            <div className={styles['card']}>
-              <div className={styles['cardImage']} style={{ backgroundImage: `url("/berita/2.png")`}}></div>
-              <div className={styles['cardContent']}>
-                <div className={styles['label']}>17 Desember 2022</div>
-                <div className={styles['cardTitle']}>Gotong Royong Kebersihan Secara Oikumene di Kecamatan Kabanjahe</div>
-                <div className={styles['cardBody']}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est...</div>
-                <div className={styles['more']}>Baca Selengkapnya</div>
-              </div>
-            </div>
-            <div className={styles['card']}>
-              <div className={styles['cardImage']} style={{ backgroundImage: `url("/berita/3.png")`}}></div>
-              <div className={styles['cardContent']}>
-                <div className={styles['label']}>17 Desember 2022</div>
-                <div className={styles['cardTitle']}>Gotong Royong Kebersihan Secara Oikumene di Kecamatan Kabanjahe</div>
-                <div className={styles['cardBody']}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est...</div>
-                <div className={styles['more']}>Baca Selengkapnya</div>
-              </div>
-            </div>
-            <div className={styles['card']}>
-              <div className={styles['cardImage']} style={{ backgroundImage: `url("/berita/4.png")`}}></div>
-              <div className={styles['cardContent']}>
-                <div className={styles['label']}>17 Desember 2022</div>
-                <div className={styles['cardTitle']}>Gotong Royong Kebersihan Secara Oikumene di Kecamatan Kabanjahe</div>
-                <div className={styles['cardBody']}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est...</div>
-                <div className={styles['more']}>Baca Selengkapnya</div>
-              </div>
-            </div>
+            {
+              // filtBerita.length == 0 ? <div>Tidak ada berita</div> :
+              filtBerita.slice(0, 3).map((berita: any) => {
+                return (
+                  <>
+                    <Link href={`/berita/${berita.uid}`} className={beritaStyles['card']}>
+                      <div className={beritaStyles['img_parent']}>
+                        <Image className={beritaStyles.img} src={berita.data.cover.url} width={370} height={180} alt="cover_sm" />
+                      </div>
+                      <div className={beritaStyles['cardContent']}>
+                        <div className={beritaStyles['label']}>{berita.data.tanggal}</div>
+                        <div className={beritaStyles['cardTitle']}>{berita.data.judul}</div>
+                        <div className={beritaStyles['cardBody']}> 
+                          {berita.data.berita[0].text.split(" ").slice(0, 10).join(" ")} ...
+                        </div>
+                        <div className={beritaStyles['more']}>
+                          Baca Selengkapnya <Image src='/arrow.svg' alt='arrow' width={16} height={16} />
+                        </div>
+                      </div>
+                    </Link>
+                  </>
+                )
+              })
+            }
           </div>
-          <div className={styles['pagination']}>
-            <div className={styles['circle']}>
-              <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.4404 19.875L20.9385 18.3769L16.0722 13.5L20.9385 8.62312L19.4404 7.125L13.0654 13.5L19.4404 19.875Z" fill="#333333"/>
-                <path d="M12.4374 19.875L13.9355 18.3769L9.0693 13.5L13.9355 8.62312L12.4374 7.125L6.06242 13.5L12.4374 19.875Z" fill="#333333"/>
-              </svg>
-            </div>
-            <div className={styles['circle']}>
-              <svg width="9" height="13" viewBox="0 0 9 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.75188 12.875L8.25 11.3769L3.38375 6.5L8.25 1.62312L6.75187 0.125L0.376875 6.5L6.75188 12.875Z" fill="black"/>
-              </svg>
-            </div>
-            <div className={styles['circle_selected']}>1</div>
-            <div className={styles['circle']}>2</div>
-            <div className={styles['circle']}>3</div>
-            <div className={styles['square']}>...</div>
-            <div className={styles['circle']}>10</div>
-            <div className={styles['circle']}>
-              <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.5919 7.125L10.0938 8.62312L14.96 13.5L10.0938 18.3769L11.5919 19.875L17.9669 13.5L11.5919 7.125Z" fill="black"/>
-              </svg>
-            </div>
-            <div className={styles['circle']}>
-              <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.30965 7.125L5.81152 8.62312L10.6778 13.5L5.81152 18.3769L7.30965 19.875L13.6846 13.5L7.30965 7.125Z" fill="black"/>
-                <path d="M14.3126 7.125L12.8145 8.62312L17.6807 13.5L12.8145 18.3769L14.3126 19.875L20.6876 13.5L14.3126 7.125Z" fill="black"/>
-              </svg>
-            </div>
-          </div>
+          <Link href={`/berita?kategori=${subheader.split(" ")[0]}`} className={buttonStyles.more}>
+            Lihat Semua Berita
+            <svg
+              width="18"
+              height="16"
+              viewBox="0 0 18 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.6895 7.24997H0.75C0.551088 7.24997 0.360322 7.32899 0.21967 7.46964C0.0790178 7.61029 0 7.80106 0 7.99997C0 8.19888 0.0790178 8.38965 0.21967 8.5303C0.360322 8.67095 0.551088 8.74997 0.75 8.74997H14.6895L9.219 14.219C9.07817 14.3598 8.99905 14.5508 8.99905 14.75C8.99905 14.9491 9.07817 15.1401 9.219 15.281C9.35983 15.4218 9.55084 15.5009 9.75 15.5009C9.94916 15.5009 10.1402 15.4218 10.281 15.281L17.031 8.53097C17.1008 8.4613 17.1563 8.37854 17.1941 8.28742C17.2319 8.1963 17.2513 8.09862 17.2513 7.99997C17.2513 7.90132 17.2319 7.80364 17.1941 7.71252C17.1563 7.6214 17.1008 7.53864 17.031 7.46897L10.281 0.718971C10.1402 0.578141 9.94916 0.499023 9.75 0.499023C9.55084 0.499023 9.35983 0.578141 9.219 0.718971C9.07817 0.859801 8.99905 1.05081 8.99905 1.24997C8.99905 1.44913 9.07817 1.64014 9.219 1.78097L14.6895 7.24997Z"
+                fill="#7D7D7D"
+              />
+            </svg>
+          </Link>
         </div>
       </div>
     </>

@@ -192,6 +192,7 @@
   color: #7D7D7D;
   margin-top: 79px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 @media (max-width: 960px) {
