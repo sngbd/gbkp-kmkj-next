@@ -11,7 +11,7 @@ const Preview = ({ results }: any) => {
     results = results.filter((result: any) => kategori && result.data.kategori === kategori);
   }
   
-  const height = results.length >= 1 ? 500 : results.slice(1 + p, 7 + p).length > 4 ? 1700: 1200
+  const height = results.length <= 1 ? 500 : results.slice(1 + p, 7 + p).length > 4 ? 1700: 1200
 
   return (
     <>
