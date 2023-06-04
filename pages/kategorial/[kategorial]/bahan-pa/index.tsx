@@ -2,11 +2,15 @@ import { GetServerSidePropsContext } from "next";
 import kategorial from "@/helpers/Kategorial";
 import { createClient } from "@/prismicio";
 import ListArticles from "@/components/ListArticles";
+import { useRouter } from "next/router";
 
 function Kepengurusan({ results, kategori, title }: any) {
+  const router = useRouter();
+  const { page } = router.query;
+
   return (
     <>
-      <ListArticles articles={results} link={`/kategorial/${title}/bahan-pa/`} title={kategori.title} />
+      <ListArticles articles={results} link={`/kategorial/${title}/bahan-pa/`} title={kategori.title} page={page} />
     </>
   )
 }

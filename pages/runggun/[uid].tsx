@@ -9,7 +9,7 @@ function Runggun({ data }: any) {
 
   return (
     <>
-      <HeroSection title={data.nama_runggun} subTitle="Kategorial GBKP KMKJ" height={rowLength * 220 + (rowLength - 1) * 25} overlay={
+      <HeroSection title={data.nama_runggun} subTitle="GBKP KMKJ" height={rowLength * 220 + (rowLength - 1) * 25} overlay={
         <div className={overlayStyles['profiles_container']}>
           <ProfileCards profiles={data.bpmr} />
         </div>

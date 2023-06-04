@@ -1,9 +1,9 @@
 .container {
-  height: 738px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10rem;
 }
 
 .title {
@@ -129,4 +129,16 @@
   font-weight: 600;
   font-size: 20.7188px;
   line-height: 28px;
+}
+
+.month {
+  padding: 0.2rem;
+  border-radius: 7.50458px;
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4rem;
+  margin-top: -2rem;
 }
