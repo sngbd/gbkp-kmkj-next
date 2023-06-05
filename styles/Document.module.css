@@ -1,9 +1,9 @@
 .container {
-  height: 1366px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 6rem;
 }
 
 .title {

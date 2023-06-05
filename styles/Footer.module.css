@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   background: #1F1F1F;
-  padding: 3rem 5rem;
+  padding: 4rem;
 }
 
 .inner_container {
@@ -13,17 +13,17 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 22.3585px;
+  font-size: 1.3rem;
   line-height: 27px;
   color: #67748E;
-  gap: 2rem 10rem;
+  gap: 3rem 15rem;
 }
 
 .header {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
-  font-size: 22.3585px;
+  font-size: 1.3rem;
   line-height: 27px;
   color: #67748E;
 }

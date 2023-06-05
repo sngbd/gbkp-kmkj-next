@@ -1,13 +1,15 @@
-import Document from '@/components/Document';
+import FileList from '@/components/FileList';
+import HeroSection from '@/components/HeroSection';
 import { createClient } from '@/prismicio';
 
 function Laporan({ results }: any) {
   return (
     <>
-      <Document 
-        document={<iframe src={results[0].data.laporan.url} width="1000" height="1000" title="laporan" />} 
+      <HeroSection
         title="Laporan Keuangan"
-        subtitle="Laporan Keuangan GKBP KMKJ"
+        subTitle="GBKP Klasis Medan Kutajurung"
+        height={results[0].data.files.length - 1 < 9 ? 850 + (results[0].data.files.length * 65) : 1400}
+        overlay={<FileList results={results} type="laporan" />}
       />
     </>
   );
