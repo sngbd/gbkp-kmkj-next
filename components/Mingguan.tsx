@@ -2,7 +2,7 @@ import styles from '@/styles/Mingguan.module.css';
 import heroStyles from '@/styles/Hero.module.css';
 import Link from 'next/link';
 
-const Hero = () => {
+const Mingguan = ({ renungan }: any) => {
   return (
   <>
     <div className={styles.container}>
@@ -13,37 +13,37 @@ const Hero = () => {
       </div>
       <div className={styles.left}>
         <h1 className={styles.title}>Bahan Renungan</h1>
-        <p className={styles.info}>Lorem ipsum dolor sit amet consectetur. Sed tincidunt eget morbi congue nunc enim. </p>
+        <p className={styles.info}>{renungan[0].data.description}</p>
         <Link href="/renungan" className={styles.button}>Lihat Bahan Renungan</Link>
       </div>
       <div className={styles.verses}>
         <div className={styles.verse}>
           <div className={styles.content}>
             <div className={styles.text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+              {renungan[0].data.renungan[0].isi}
             </div>
             <div className={styles.bible_verse}>
-              Yeremia 1:4
+              {renungan[0].data.renungan[0].ayat}
             </div>
           </div>
         </div>
         <div className={`${styles.verse} ${styles.verse2}`}>
           <div className={styles.content}>
             <div className={styles.text}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui dicta deleniti ducimus, molestiae accusamus facilis numquam pariatur doloremque minima dolores.
+              {renungan[0].data.renungan[1].isi}
             </div>
             <div className={styles.bible_verse}>
-              Matius 3:5
+              {renungan[0].data.renungan[1].ayat}
             </div>
           </div>
         </div>
         <div className={`${styles.verse} ${styles.verse3}`}>
           <div className={styles.content}>
             <div className={styles.text}>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores nemo magnam eius libero alias quos animi neque perspiciatis consequuntur optio?
+              {renungan[0].data.renungan[2].isi}
             </div>
             <div className={styles.bible_verse}>
-              Keluaran 3:5
+              {renungan[0].data.renungan[2].ayat}
             </div>
           </div>
         </div>
@@ -58,4 +58,4 @@ const Hero = () => {
   );
 }
 
-export default Hero;
+export default Mingguan;

@@ -15,7 +15,18 @@ const Preview = ({ results }: any) => {
 
   return (
     <>
-      <HeroSection title="Berita" subTitle="GBKP Klasis Medan Kutajurung" height={height} overlay={results.length !== 0 && <BeritaHome kategori={kategori} page={page ?? 1} berita={results} />} />
+      <HeroSection
+        title="Berita"
+        subTitle="GBKP Klasis Medan Kutajurung"
+        height={height}
+        overlay={results.length !== 0 && 
+          <BeritaHome
+            kategori={kategori}
+            page={page ?? 1}
+            berita={results} 
+          />
+        }
+      />
     </>
   );
 }

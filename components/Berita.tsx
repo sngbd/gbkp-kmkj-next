@@ -2,15 +2,13 @@ import styles from '@/styles/Berita.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Berita = ({ berita }: any) => {
+const Berita = ({ berita, beritaDesc }: any) => {
   return (
     <>
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.title}>Berita Mingguan</div>
-          <div className={styles.desc}>Lorem ipsum dolor sit amet consectetur. Sed tincidunt eget morbi
-            congue nunc enim. Venenatis sapien sit eget urna. Egestas
-          </div>
+          <div className={styles.desc}>{beritaDesc[0].data.description}</div>
         </div>
         <div className={styles.cards}>
           {berita.map((item: any, i: any) => {
@@ -27,8 +25,7 @@ const Berita = ({ berita }: any) => {
                   <div className={styles.text}>
                     <div className={styles.title}>{item.data.judul}</div>
                     <div className={styles.description}>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eligendi pariatur, laboriosam assumenda nisi eius dicta!
+                        {item.data.berita[0].text.split(" ").slice(0, 15).join(" ")}...
                     </div>
                   </div>
                   <Link href={`/berita/${item.uid}`} className={styles.baca}>Lanjut Baca</Link>

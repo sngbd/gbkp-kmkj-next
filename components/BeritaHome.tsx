@@ -25,7 +25,7 @@ const BeritaHome = ({ kategori, page, berita }: any) => {
                 <div className={styles['label']}>{berita[0].data.tanggal}</div>
                 <div className={styles['title']}>{berita[0].data.judul}</div>
                 <div className={styles['body']}> 
-                  {berita[0].data.berita[0].text.split(" ").slice(0, 10).join(" ")} ...
+                  {berita[0].data.berita[0].text.split(" ").slice(0, 10).join(" ")}...
                 </div>
                 <div className={styles['more']}>
                   Baca Selengkapnya <Image src='/arrow.svg' alt='arrow' width={16} height={16} />
@@ -47,7 +47,7 @@ const BeritaHome = ({ kategori, page, berita }: any) => {
                       <div className={styles['label']}>{berita.data.tanggal}</div>
                       <div className={styles['cardTitle']}>{berita.data.judul}</div>
                       <div className={styles['cardBody']}> 
-                        {berita.data.berita[0].text.split(" ").slice(0, 10).join(" ")} ...
+                        {berita.data.berita[0].text.split(" ").slice(0, 10).join(" ")}...
                       </div>
                       <div className={styles['more']}>
                         Baca Selengkapnya <Image src='/arrow.svg' alt='arrow' width={16} height={16} />

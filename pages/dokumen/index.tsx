@@ -1,12 +1,14 @@
+import { createClient } from '@/prismicio';
 import styles from '@/styles/Dokumen.module.css'
+import { GetServerSidePropsContext } from 'next';
 import Link from 'next/link';
 
-function Dokumen() {
+function Dokumen({ results }: any) {
   return (
     <>
       <div className={styles['container']}>
         <div className={styles['title']}>Dokumen GBKP Klasis Medan Kutajurung</div>
-        <div className={styles['desc']}>Lorem ipsum dolor sit amet consectetur. Sed tincidunt eget morbi congue nunc enim. Venenatis sapien sit eget urna. Egestas</div>
+        <div className={styles['desc']}>{results[0].data.description}</div>
         <div className={styles['buttons']}>
           <Link href="/dokumen/roster-kotbah-3" className={styles.button}>
             Roster Khotbah Minggu Ketiga
@@ -24,6 +26,16 @@ function Dokumen() {
       </div>
     </>
   );
+}
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const client = createClient();
+  
+  const { results } = await client.getByType('dokumen_desc');
+
+  return {
+    props: { results },
+  }
 }
 
 export default Dokumen;
