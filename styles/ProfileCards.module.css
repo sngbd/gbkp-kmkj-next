@@ -82,11 +82,11 @@
   display: flex;
   align-items: center;
   color: #17C1E8;
+  margin-bottom: 1rem;
 }
 
 .phone {
   width: 372px;
-  height: 52px;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;

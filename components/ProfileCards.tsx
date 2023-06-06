@@ -18,6 +18,12 @@ const ProfileCards = ({ profiles }: any) => {
                   <div className={styles.phone}>
                     <Image key={item.nama} src='/wa.svg' alt='wa' width={21} height={21} /> {item.whatsapp}
                   </div>
+                  {
+                    item.email &&
+                    <div className={styles.phone}>
+                      <Image key={item.nama} src='/email.svg' alt='email' width={21} height={21} /> {item.email}
+                    </div>
+                  }
                 </div>
               </div>
             </>

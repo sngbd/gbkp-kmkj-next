@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 6004px;
+  padding: 8rem 0rem;
 }
 
 .inner {
@@ -76,7 +76,25 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
+  font-size: 48.5819px;
+  line-height: 52px;
+  margin-bottom: 15px;
+}
+
+.header2 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
   font-size: 39.5819px;
+  line-height: 52px;
+  margin-bottom: 15px;
+}
+
+.header3 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28.5819px;
   line-height: 52px;
   margin-bottom: 15px;
 }
