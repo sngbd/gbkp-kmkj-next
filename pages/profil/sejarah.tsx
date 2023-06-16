@@ -15,7 +15,7 @@ function Sejarah ({ results }: any) {
       <div className={styles['header3']}>{children}</div>
     ),
     image: ({ node }: any) => (
-      <Image src={node.url} width={node.dimensions.width} height={node.dimensions.height} alt="gereja" />
+      <Image className={styles.image} src={node.url} width={node.dimensions.width} height={node.dimensions.height} alt="gereja" />
     ),
     paragraph: ({ children }: any) => (
       <div className={styles['body']}>{children}</div>

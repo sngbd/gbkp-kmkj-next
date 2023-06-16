@@ -17,7 +17,7 @@ function Kategorial({ results }: any) {
             results.data.menu.map((result: any, index: any) => {
               return (
                 <>
-                  <Link href={links[index]} className={styles['menu']}>
+                  <Link key={result.title} href={links[index]} className={styles['menu']}>
                     <div className={styles['image']}>
                       <Image alt="kategorial" src={result.thumb.url} layout='fill' />
                     </div>

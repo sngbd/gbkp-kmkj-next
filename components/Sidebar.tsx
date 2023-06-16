@@ -20,13 +20,13 @@ function Sidebar() {
               {!click ? '☰' : '✕'}
             </div>
             <div className={styles['items']}>
-              <Link href="/" className={styles.item}>Beranda</Link>
-              <Link href="/profil" className={styles.item}>Profil</Link>
-              <Link href="/berita" className={styles.item}>Berita</Link>
-              <Link href="/kategorial" className={styles.item}>Kategorial</Link>
-              <Link href="/renungan" className={styles.item}>Bahan Renungan</Link>
-              <Link href="/runggun" className={styles.item}>Runggun</Link>
-              <Link href="/dokumen" className={styles.item}>Dokumen</Link>
+              <Link onClick={() => toggleClick()} href="/" className={styles.item}>Beranda</Link>
+              <Link onClick={() => toggleClick()} href="/profil" className={styles.item}>Profil</Link>
+              <Link onClick={() => toggleClick()} href="/berita" className={styles.item}>Berita</Link>
+              <Link onClick={() => toggleClick()} href="/kategorial" className={styles.item}>Kategorial</Link>
+              <Link onClick={() => toggleClick()} href="/renungan" className={styles.item}>Bahan Renungan</Link>
+              <Link onClick={() => toggleClick()} href="/runggun" className={styles.item}>Runggun</Link>
+              <Link onClick={() => toggleClick()} href="/dokumen" className={styles.item}>Dokumen</Link>
             </div>
           </div>
         </>

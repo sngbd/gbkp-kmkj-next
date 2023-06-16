@@ -7,12 +7,10 @@ const Info = ({ results }: any) => {
       <div className={styles.infos}>
         {
           results.map((result: any) => (
-            <>
-              <div className={styles.statistic}>
-                <div className={styles.title}>{result.title}</div>
-                <div className={styles.number}>{result.number}</div>
-              </div>
-            </>
+            <div key={result.title} className={styles.statistic}>
+              <div className={styles.title}>{result.title}</div>
+              <div className={styles.number}>{result.number}</div>
+            </div>
           ))
         }
       </div>

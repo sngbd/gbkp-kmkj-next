@@ -8,6 +8,7 @@
   font-family: 'Inter';
   flex-direction: column;
   margin-bottom: 138px;
+  padding: 0rem 6rem;
 }
 
 .header {
@@ -45,7 +46,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 1080px;
+  gap: 3rem;
 }
 
 .card {
@@ -193,7 +194,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   .container {
     height: 100%;
     padding: 40px 0px;
@@ -233,5 +234,59 @@
   
   .text {
     width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .card {
+    width: 14rem;
+    height: 20rem;
+  }
+
+  .card_main {
+    width: 17rem;
+    height: 25rem;
+  }
+
+  .text .title {
+    width: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    color: #FFFFFF;
+    overflow: hidden;
+  }
+
+  .text .description {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.227px;
+    line-height: 160%;
+    color: #FFFFFF;
+  }
+  
+  .card_main .text .title {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .card_main .text .description {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .inner_card {
+    width: 17rem;
+    height: 100%;
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:2rem;
   }
 }

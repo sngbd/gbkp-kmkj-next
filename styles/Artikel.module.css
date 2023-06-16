@@ -17,7 +17,6 @@
 .content {
   display: flex;
   flex-direction: column;
-  padding: 0px;
   gap: 35.1px;
 }
 
@@ -84,7 +83,11 @@
   }
   
   .overlay_section {
-    margin: 0px 50px;
+    margin: 0px 20px;
+  }
+  
+  .overlay_container {
+    padding: 2rem 0rem;
   }
 }
 

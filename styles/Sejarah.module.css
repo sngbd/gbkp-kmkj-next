@@ -125,4 +125,9 @@
   .body {
     font-size: 20px;
   }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
 }

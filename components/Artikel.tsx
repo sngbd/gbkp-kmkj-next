@@ -1,10 +1,28 @@
 import styles from '@/styles/Artikel.module.css'
+import { PrismicRichText } from '@prismicio/react';
 import Image from 'next/image';
 
-function Artikel({ berita, refr }: any) {
+function Artikel({ berita }: any) {
+  const components = {
+    image: ({ node }: any) => (
+      <Image src={node.url} width={node.dimensions.width} height={node.dimensions.height} alt="image" />
+    ),
+    paragraph: ({ children }: any) => (
+      <div className={styles['text']}>{children}</div>
+    ),
+    oList: ({ children }: any) => (
+      <div className={styles['text']}>
+        <ol>{children}</ol>
+      </div>
+    ),
+    listItem: ({ children }: any) => (
+      <li className={styles['text']}>{children}</li>
+    ),
+  }
+
   return (
     <>
-      <div className={styles.overlay_container} ref={refr}>
+      <div className={styles.overlay_container}>
         <div className={styles.overlay_section}>
           <div className={styles.content}>
             <div className={styles.image}>
@@ -21,19 +39,7 @@ function Artikel({ berita, refr }: any) {
             <div className={styles.title}>
               {berita.judul}
             </div>
-            {
-              berita.berita.map((item: any) => {
-                if (item.type === "paragraph") {
-                  return (
-                    <>
-                      <div className={styles.text}>
-                        {item.text}
-                      </div>
-                    </>
-                  )
-                }
-              })
-            }
+            <PrismicRichText field={berita.berita} components={components} />
           </div>
         </div>
       </div>
