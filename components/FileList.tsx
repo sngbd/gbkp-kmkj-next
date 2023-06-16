@@ -5,7 +5,7 @@ function FileList({ results, type }: any) {
   return (
     <>
       <div className={styles.container}>
-        <iframe src={results[0].data.files[0][type]?.url ?? "#"} width="1194" height="849" title={type}/>
+        <iframe className={styles.iframe} src={results[0].data.files[0][type]?.url ?? "#"} title={type}/>
         <h1 className={styles.title}><b>File Lainnya</b></h1>
         <div className={styles.list}>
           {

@@ -21,9 +21,12 @@ function Sidebar() {
             </div>
             <div className={styles['items']}>
               <Link href="/" className={styles.item}>Beranda</Link>
+              <Link href="/profil" className={styles.item}>Profil</Link>
               <Link href="/berita" className={styles.item}>Berita</Link>
-              <Link href="/kategorial" className={styles.item}>Berita</Link>
+              <Link href="/kategorial" className={styles.item}>Kategorial</Link>
+              <Link href="/renungan" className={styles.item}>Bahan Renungan</Link>
               <Link href="/runggun" className={styles.item}>Runggun</Link>
+              <Link href="/dokumen" className={styles.item}>Dokumen</Link>
             </div>
           </div>
         </>

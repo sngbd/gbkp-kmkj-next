@@ -8,7 +8,7 @@ function Statistik ({ results }: any) {
       <HeroSection
         title="Statistik"
         subTitle="GBKP Klasis Medan Kutajurung" 
-        height={results[0].data.files.length - 1 < 9 ? 850 + (results[0].data.files.length * 65) : 1400}
+        height={"6rem 0rem"}
         overlay={<FileList results={results} type="statistik_pdf" />}
       />
     </>

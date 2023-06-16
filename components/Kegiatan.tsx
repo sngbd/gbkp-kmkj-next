@@ -13,7 +13,6 @@ function Kegiatan({ subheader, filtBerita }: any) {
           <div className={styles.subheader}>{subheader}</div>
           <div className={styles['cards']}>
             {
-              // filtBerita.length == 0 ? <div>Tidak ada berita</div> :
               filtBerita.slice(0, 3).map((berita: any) => {
                 return (
                   <>

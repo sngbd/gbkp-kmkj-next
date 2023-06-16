@@ -1,23 +1,11 @@
 import Artikel from "@/components/Artikel";
-import HeroSection from "@/components/HeroSection";
 import { createClient } from "@/prismicio";
-import { PrismicRichText } from "@prismicio/react";
 import { GetServerSidePropsContext } from "next";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 function BeritaPost ({ data }: any) {
-  const [height, setHeight] = useState(0);
-  const ref: any = useRef(null);
-
-  useEffect(() => {
-    if (ref.current) {
-      setHeight(ref.current.offsetHeight);
-    }
-  }, []);
-
   return (
     <>
-      <HeroSection height={height - 340} overlay={<Artikel refr={ref} berita={data} />} />
+      <Artikel berita={data} />
     </>
   )
 }

@@ -16,7 +16,7 @@ const HeroSection = ({ title, subTitle, overlay, height }: any) => {
       </div>
       {
         overlay && 
-        <div style={{ height }}>
+        <div style={{ padding:height }}>
           {overlay}
         </div>
       }

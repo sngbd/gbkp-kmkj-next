@@ -18,7 +18,7 @@ const BeritaHome = ({ kategori, page, berita }: any) => {
           berita.length > 0 &&
           <Link href={`/berita/${berita[0].uid}`} className={styles['featured']}>
             <div className={styles['featured_img_parent']}>
-              <Image className={styles.img} src={berita[0].data.cover.url} width={692.91} height={297.85} alt="cover_lg" />
+              <Image className={styles.img} src={berita[0].data.cover.url} layout='fill' alt="cover_lg" />
             </div>
             <div className={styles['text']}>
               <div className={styles['content']}>

@@ -1,14 +1,14 @@
 import { createClient } from '@/prismicio'
-import Hero from '@/components/Hero';
 import Berita from '@/components/Berita';
 import Mingguan from '@/components/Mingguan';
 import Personalia from '@/components/Personalia';
 import Info from '@/components/Info';
+import HeroHome from '@/components/HeroHome';
 
 const Home = ({ berita, bpmk, info, beritaDesc, renungan }: any) => {
   return ( 
     <>
-      <Hero title="GBKP Klasis Medan Kutajurung" left="Hubungi Kami" right="Lokasi Kantor" />
+      <HeroHome title="GBKP Klasis Medan Kutajurung" left="Hubungi Kami" right="Lokasi Kantor" />
       <Info results={info.results[0].data.info} />
       <Berita berita={berita.results.slice(0, 3)} beritaDesc={beritaDesc.results} />
       <Mingguan renungan={renungan.results} />

@@ -1,10 +1,7 @@
 .overlay_container {  
   display: flex;
   justify-content: center;
-  position: absolute;
-  left: 50%;
-  top: 210px;
-  transform: translate(-50%, 0%);
+  padding: 5rem 0rem;
 }
 
 .overlay_section {
@@ -12,18 +9,16 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: 1134.82px;
   border: 2.33983px solid #C8C8C8;
-  padding: 23px 0px;
+  padding: 23px 23.4px;
+  margin: 0px 180px;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding: 0px;
   gap: 35.1px;
-  width: 1088.02px;
 }
 
 .date {
@@ -71,4 +66,34 @@
 
 .img {
   object-fit: cover;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 40vw;
+}
+
+@media (max-width: 960px) {
+  .title {
+    font-size: 40px;
+  }
+  
+  .text {
+    font-size: 20px;
+  }
+  
+  .overlay_section {
+    margin: 0px 50px;
+  }
+}
+
+@media (max-width: 425px) {
+  .title {
+    font-size: 30px;
+  }
+  
+  .text {
+    font-size: 15px;
+  }
 }

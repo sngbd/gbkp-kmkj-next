@@ -7,7 +7,9 @@ function Artikel({ berita, refr }: any) {
       <div className={styles.overlay_container} ref={refr}>
         <div className={styles.overlay_section}>
           <div className={styles.content}>
-            <Image className={styles.img} src={berita.cover.url} alt="image" width={1088.02} height={680.89} />
+            <div className={styles.image}>
+              <Image className={styles.img} src={berita.cover.url} alt="image" layout='fill' />
+            </div>
             <div className={styles.date}>
               {berita.tanggal}
             </div>

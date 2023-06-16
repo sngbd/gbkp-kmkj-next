@@ -6,14 +6,10 @@ import ProfileCards from "@/components/ProfileCards";
 import { createClient } from "@/prismicio";
 
 function Kepengurusan({ results, kategori, title }: any) {
-  const rowLength = Math.round(results[0].data[title].length / 2);
-
   return (
     <>
-      <HeroSection title={kategori.title} subTitle="Kategorial GBKP KMKJ" height={rowLength * 220 + (rowLength - 1) * 25} overlay={
-        <div className={overlayStyles['profiles_container']}>
-          <ProfileCards profiles={results[0].data[title]} />
-        </div>
+      <HeroSection title={kategori.title} subTitle="Kategorial GBKP KMKJ" height={"6rem 0rem"} overlay={
+        <ProfileCards profiles={results[0].data[title]} />
       } />
     </>
   )

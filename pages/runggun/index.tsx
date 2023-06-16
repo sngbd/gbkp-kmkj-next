@@ -12,15 +12,15 @@ function Runggun({ results }: any) {
           {
             results.map((r: any) => {
               return (
-              <>
-                <div className={styles['item']}>
-                  <div className={styles['border']}>
-                    <Link key={r.id} className={styles['button']} href={`/runggun/${r.uid}`}>
-                      {r.data.nama_runggun}
-                    </Link>
+                <>
+                  <div className={styles['item']}>
+                    <div className={styles['border']}>
+                      <Link key={r.id} className={styles['button']} href={`/runggun/${r.uid}`}>
+                        {r.data.nama_runggun}
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </>
+                </>
               )
             })
           }

@@ -11,14 +11,12 @@ const Preview = ({ results }: any) => {
     results = results.filter((result: any) => kategori && result.data.kategori === kategori);
   }
   
-  const height = results.length <= 1 ? 500 : results.slice(1 + p, 7 + p).length > 4 ? 1700: 1200
-
   return (
     <>
       <HeroSection
         title="Berita"
         subTitle="GBKP Klasis Medan Kutajurung"
-        height={height}
+        height={"6rem 0rem"}
         overlay={results.length !== 0 && 
           <BeritaHome
             kategori={kategori}

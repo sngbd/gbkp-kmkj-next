@@ -2,6 +2,7 @@
 
 .container {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -26,6 +27,7 @@
   -webkit-background-clip: text;
   color: transparent;
   filter: brightness(2.2);
+  text-align: center;
 }
 
 .subheader {
@@ -41,55 +43,8 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  width: 1210px;
-  justify-content: space-between;
-}
-
-.card {
-  width: 370px;
-  height: 498px;
-  background: #FFFFFF;
-  border: 1px solid #EEECEC;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-}
-
-.cardContent {
-  padding: 24px;
-  padding-top: 16px;
-}
-
-.cardImage {
-  width: 370px;
-  height: 180px; 
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-  object-fit: cover;
-}
-
-.cardTitle {
-  width: 322px;
-  height: 108px;
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 21.3972px;
-  line-height: 36px;
-  color: #000000;
-}
-
-.cardBody {
-  width: 322px;
-  height: 84px;
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0.108714px;
-  color: #909090;
-  margin-bottom: 32px;
+  justify-content: center;
+  gap: 50px 2.25rem;
 }
 
 .pagination {
@@ -160,4 +115,14 @@
   width: 370px;
   height: 180px;
   overflow: hidden;
+}
+
+@media (max-width: 960px) {
+  .header {
+    font-size: 58px;
+  }
+
+  .subheader {
+    font-size: 34px;
+  }
 }

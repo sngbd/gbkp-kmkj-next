@@ -1,9 +1,13 @@
 .container {
-  box-sizing: border-box;
-  position: absolute;
-  left: 50%;
-  top: 550px;
-  transform: translate(-50%, 0%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem 14rem;
+}
+
+.iframe {
+  width: 1150px;
+  height: 850px;
 }
 
 .profiles_container {
@@ -91,4 +95,11 @@
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #555;
+}
+
+@media (max-width: 1150px) {
+  .iframe {
+    width: 100vw;
+    height: 500px;
+  }
 }

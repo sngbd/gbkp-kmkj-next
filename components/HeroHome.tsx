@@ -1,7 +1,7 @@
 import styles from '@/styles/HeroHome.module.css';
 import Link from 'next/link';
 
-const Hero = ({ title, left, leftLink = "#contact", right, rightLink = "#address", bg }: any) => {
+const HeroHome = ({ title, left, leftLink = "#contact", right, rightLink = "#address", bg }: any) => {
   return (
     <>
       <div className={styles.container} style={bg ? { backgroundImage: `linear-gradient(75.33deg, rgba(0, 0, 0, 0.5) -10.41%, rgba(0, 0, 0, 0) 62.93%), url(${bg})` } : {}}>
@@ -22,4 +22,4 @@ const Hero = ({ title, left, leftLink = "#contact", right, rightLink = "#address
   );
 }
 
-export default Hero;
+export default HeroHome;

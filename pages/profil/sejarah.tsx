@@ -27,7 +27,6 @@ function Sejarah ({ results }: any) {
     ),
   }
 
-  console.log(results);
   return (
     <> 
       <div className={styles['container']}>
