@@ -1,10 +1,11 @@
 import styles from '@/styles/HeroHome.module.css';
 import Link from 'next/link';
+import { RefObject, forwardRef } from 'react';
 
-const HeroHome = ({ title, left, leftLink = "#contact", right, rightLink = "#address", bg }: any) => {
+const HeroHome = forwardRef(({className, title, left, leftLink = "#contact", right, rightLink = "#address", bg}: any, ref) => {
   return (
     <>
-      <div className={styles.container} style={bg ? { backgroundImage: `linear-gradient(75.33deg, rgba(0, 0, 0, 0.5) -10.41%, rgba(0, 0, 0, 0) 62.93%), url(${bg})` } : {}}>
+      <div ref={ref as RefObject<HTMLDivElement> | null} className={`${styles.container} ${className}`} style={bg ? { backgroundImage: `linear-gradient(75.33deg, rgba(0, 0, 0, 0.5) -10.41%, rgba(0, 0, 0, 0) 62.93%), url(${bg})` } : {}}>
         <div className={styles.inner}>
           <div className={styles.title}>{title}</div>
           <div className={styles.buttons}>
@@ -20,6 +21,8 @@ const HeroHome = ({ title, left, leftLink = "#contact", right, rightLink = "#add
       </div>
     </>
   );
-}
+})
+
+HeroHome.displayName = 'HeroHome'
 
 export default HeroHome;

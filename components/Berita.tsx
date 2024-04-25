@@ -1,10 +1,11 @@
 import styles from '@/styles/Berita.module.css';
 import Link from 'next/link';
+import { RefObject, forwardRef } from 'react';
 
-const Berita = ({ berita, beritaDesc }: any) => {
+const Berita = forwardRef(({ className, berita, beritaDesc }: any, ref) => {
   return (
     <>
-      <div className={styles.container}>
+      <div ref={ref as RefObject<HTMLDivElement> | null} className={`${styles.container} ${className}`}>
         <div className={styles.header}>
           <div className={styles.title}>Berita Mingguan</div>
           <div className={styles.desc}>{beritaDesc[0].data.description}</div>
@@ -51,6 +52,8 @@ const Berita = ({ berita, beritaDesc }: any) => {
       </div>
     </>
   );
-};
+})
+
+Berita.displayName = 'Berita'
 
 export default Berita;

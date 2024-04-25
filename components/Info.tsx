@@ -1,9 +1,10 @@
 import styles from '@/styles/Info.module.css';
+import { RefObject, forwardRef } from 'react';
 
-const Info = ({ results }: any) => {
+const Info = forwardRef(({ className, results }: any, ref) => {
   return (
     <>
-    <div className={styles.container}>
+    <div ref={ref as RefObject<HTMLDivElement> | null} className={`${styles.container} ${className}`}>
       <div className={styles.infos}>
         {
           results.map((result: any) => (
@@ -17,6 +18,8 @@ const Info = ({ results }: any) => {
     </div>
     </>
   );
-}
+})
+
+Info.displayName = "Info"
 
 export default Info;
