@@ -125,3 +125,9 @@
     display: none;
   }
 }
+
+@media (max-width: 1400px) {
+  .verse2 {
+    margin-left: 90px;
+  }
+}

@@ -206,10 +206,11 @@
   }
 }
 
-@media (max-width: 1378px) {
+@media (max-width: 1400px) {
   .container {
     padding-bottom: 10rem;
     height: auto;
+    margin-top: 5rem;
   }
   
   .title {
